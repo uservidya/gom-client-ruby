@@ -9,7 +9,6 @@
 ### Setup and initialization
 
 ```ruby
-import gom_client_ruby
 GOM = RestFs::Client.new GOM_ROOT
 ```
 
