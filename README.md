@@ -80,16 +80,14 @@ All further operations are then performed via the initialized object (in this ex
   * Attribute update
 
     ```ruby
-    >>> GOM.update("/test:temperature", "50 °C")
+    >>> GOM.update!("/test:temperature", "50 °C")
     '50 °C'
     ```
    
   * Node update
 
-    ```python
-    >>> import gom_client
-    >>> GOM = gom_client.GomClient("http://192.168.56.101:3080")
-    >>> GOM.update("/test/weather", {"temperature": "50 °C", "wind_velocity": "3 km/h", "wind_direction": "NNW"})
+    ```ruby
+    >>> GOM.update!("/test/weather", {"temperature": "50 °C", "wind_velocity": "3 km/h", "wind_direction": "NNW"})
     {'status': 201}
     ```
 
@@ -97,19 +95,15 @@ All further operations are then performed via the initialized object (in this ex
 
   * Delete existing node
   
-    ```python
-    >>> import gom_client
-    >>> GOM = gom_client.GomClient("http://192.168.56.101:3080")
-    >>> GOM.delete("/test/c18bf546-e577-414a-92d2-2ebdfb69b4f6")
+    ```ruby
+    >>> GOM.destroy("/test/c18bf546-e577-414a-92d2-2ebdfb69b4f6")
     True
     ```
 
   * Delete non-existing node
   
-    ```python
-    >>> import gom_client
-    >>> GOM = gom_client.GomClient("http://192.168.56.101:3080")
-    >>> print(GOM.delete("/test/does-not-exist"))
+    ```ruby
+    >>> print(GOM.destroy("/test/does-not-exist"))
     None
     ```
   
@@ -119,18 +113,15 @@ Attributes are deleted accordingly
   
   * Create empty node
   
-   ```python
-   >>> import gom_client
-   >>> GOM = gom_client.GomClient("http://192.168.56.101:3080")
-   >>> GOM.create("/test")
+   ```ruby
+   >>> GOM.create!("/test")
    '/test/c18bf546-e577-414a-92d2-2ebdfb69b4f6'
    ```
   
   * Create node with attributes
   
     ```ruby
-    >>> import gom_client
-    >>> GOM.create("/test", {"name":"Hans", "profession": "Lumberjack"})
+    >>> GOM.create!("/test", {"name":"Hans", "profession": "Lumberjack"})
     '/test/419e9db0-2800-43ed-9053-edaafd4f60b3'
     >>> GOM.retrieve("/test/419e9db0-2800-43ed-9053-edaafd4f60b3")
     {'node': {'ctime': '2012-10-12T10:43:25+02:00',
@@ -152,11 +143,7 @@ Attributes are deleted accordingly
 
 ##Packaging
 
-```bash
-easy_install-3.2 .
-```
-
 ##TODO
 
-* Document script runner
-* Document gom observer creation
+* Document script runner (run_script)
+* Document gom observer creation (register_observer)
