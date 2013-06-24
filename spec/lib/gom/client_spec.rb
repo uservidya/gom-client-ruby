@@ -12,7 +12,7 @@ describe Gom::Client do
     it 'retrieves node' do
       (hash = gom.retrieve prefix).should be_kind_of(Hash)
       (node = hash[:node]).should be_kind_of(Hash)
-      node[:uri].should eq('')#prefix)
+      node[:uri].should eq(prefix)
       node[:entries].should be
     end
   end
