@@ -46,8 +46,14 @@ module Gom
         raise HttpError.new(response, "#{e} -- could not parse body: '#{response.body}'")
       end
       
-      raise "too many redirects" if (redirect_limit == 0 && response.kind_of?(Net::HTTPRedirection))
-      return Gom::retrieve(response['location'], redirect_limit - 1) if response.kind_of?(Net::HTTPRedirection)
+      if (redirect_limit == 0 && response.kind_of?(Net::HTTPRedirection))
+        raise "too many redirects"
+      end
+
+      if response.kind_of?(Net::HTTPRedirection)
+        return Gom::retrieve(response['location'], redirect_limit - 1)
+      end
+
       raise HttpError.new(response, "while GETting #{uri.path}")
     end
 
