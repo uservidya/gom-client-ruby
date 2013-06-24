@@ -90,7 +90,7 @@ All further operations are then performed via the initialized object (in this ex
     {'status': 201}
     ```
 
-* DELETE/delete
+* DELETE/destroy
 
   * Delete existing node
   
