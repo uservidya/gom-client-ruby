@@ -57,6 +57,8 @@ module Gom
       raise HttpError.new(response, "while GETting #{uri.path}")
     end
 
+    # GOM API Change: Destroy will NOT return error on non-existing attributes
+    # or nodes. So no error will every be raised from this methods
     def destroy!(path_or_uri)
       uri      = path_or_uri.kind_of?(URI) ? path_or_uri  : URI.parse("#{@root}#{path_or_uri}")
       response = Net::HTTP.new(uri.host, uri.port).delete(uri.path)
@@ -78,8 +80,11 @@ module Gom
       headers      = { 'Content-Type' => 'application/xml' }
       response     = Net::HTTP.new(uri.host, uri.port).request_post(uri.path, request_body, headers)
       
-      return URI.parse(response['location']).path if response.kind_of?(Net::HTTPRedirection)
-      raise HttpError.new(response, "while CREATEing #{uri.path}")
+      if response.kind_of?(Net::HTTPRedirection)
+        return URI.parse(response['location']).path
+      end
+
+      raise HttpError.new(response, "while CREATEing (#{uri.path})")
     end
     
     def update!(path_or_uri, hash_or_text=nil)
@@ -117,7 +122,7 @@ module Gom
       
       return response.body if response.kind_of?(Net::HTTPSuccess) && response_format == "text/plain"
       if response.kind_of?(Net::HTTPSuccess) && response_format == "application/json"
-        return HashWithIndifferentAccess.new(ActiveSupport::JSON.decode(response.body))
+        return JSON.parse(response.body, symbolize_names: true)
       end
       raise HttpError.new(response, "while PUTting #{uri.path}")
     end
