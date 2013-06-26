@@ -11,6 +11,13 @@ describe Gom::Client do
     #let(:prefix)  { gom.create!("/tests", {}) }
     #let(:prefix)  { "/tests/08ec4b58-38b3-44ac-9ea9-62b42a62b061" }
 
+    before(:all) {
+     # VCR.insert_cassette('gom.dev.artcom.de', :record => :new_episodes)
+    }
+    after(:all) {
+     # VCR.eject_cassette
+    }
+
     it 'creates and retrieves new node with no attributes' do
       (uri = gom.create!("/tests/1", {})).should match(%r(/tests/1/\w+))
       (hash = gom.retrieve uri).should be_kind_of(Hash)

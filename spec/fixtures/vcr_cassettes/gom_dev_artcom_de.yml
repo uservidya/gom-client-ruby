@@ -1,0 +1,243 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://gom.dev.artcom.de/tests/1
+    body:
+      encoding: US-ASCII
+      string: <node/>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 303
+      message: See Other
+    headers:
+      Date:
+      - Tue, 25 Jun 2013 15:16:44 GMT
+      Server:
+      - Apache/2.2.16 (Debian)
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.19
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - a8edde73641c86168d4d61eb75bbc920
+      X-Runtime:
+      - '0.004594'
+      X-Rack-Cache:
+      - invalidate, pass
+      Location:
+      - http://gom.dev.artcom.de/tests/1/58ddce3a-9bd4-4d7a-9416-469fda0f6541
+      Status:
+      - '303'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '135'
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="http://gom.dev.artcom.de/tests/1/58ddce3a-9bd4-4d7a-9416-469fda0f6541">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Tue, 25 Jun 2013 14:56:53 GMT
+- request:
+    method: get
+    uri: http://gom.dev.artcom.de/tests/1/58ddce3a-9bd4-4d7a-9416-469fda0f6541
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Jun 2013 15:16:44 GMT
+      Server:
+      - Apache/2.2.16 (Debian)
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.19
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"a429961940b70f2c84aeaf795fa72122"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 88c9ff41af2dc7505c191419b2ae94db
+      X-Runtime:
+      - '0.002257'
+      X-Rack-Cache:
+      - miss
+      Status:
+      - '200'
+      Content-Length:
+      - '193'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"node\": {\n    \"uri\": \"/tests/1/58ddce3a-9bd4-4d7a-9416-469fda0f6541\",\n
+        \   \"mtime\": \"2013-06-25T17:16:44+02:00\",\n    \"ctime\": \"2013-06-25T17:16:44+02:00\",\n
+        \   \"entries\": [\n      \n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Tue, 25 Jun 2013 14:56:53 GMT
+- request:
+    method: post
+    uri: http://gom.dev.artcom.de/tests/2
+    body:
+      encoding: US-ASCII
+      string: <node><attribute name='x'>u</attribute><attribute name='a'>23</attribute></node>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 303
+      message: See Other
+    headers:
+      Date:
+      - Tue, 25 Jun 2013 15:16:44 GMT
+      Server:
+      - Apache/2.2.16 (Debian)
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.19
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 9a5376ef2153701f9827fee6075e6f5d
+      X-Runtime:
+      - '0.005069'
+      X-Rack-Cache:
+      - invalidate, pass
+      Location:
+      - http://gom.dev.artcom.de/tests/2/994d460d-1e45-48fd-9b43-90069ba49dce
+      Status:
+      - '303'
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '135'
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="http://gom.dev.artcom.de/tests/2/994d460d-1e45-48fd-9b43-90069ba49dce">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Tue, 25 Jun 2013 14:56:53 GMT
+- request:
+    method: get
+    uri: http://gom.dev.artcom.de/tests/2/994d460d-1e45-48fd-9b43-90069ba49dce
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Jun 2013 15:16:44 GMT
+      Server:
+      - Apache/2.2.16 (Debian)
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.19
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"2728e0d11d84ba0f39b99860defc063c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 343a7e53632116d872b3591f89eb444f
+      X-Runtime:
+      - '0.002261'
+      X-Rack-Cache:
+      - miss
+      Status:
+      - '200'
+      Content-Length:
+      - '193'
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"node\": {\n    \"uri\": \"/tests/2/994d460d-1e45-48fd-9b43-90069ba49dce\",\n
+        \   \"mtime\": \"2013-06-25T17:16:44+02:00\",\n    \"ctime\": \"2013-06-25T17:16:44+02:00\",\n
+        \   \"entries\": [\n      \n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Tue, 25 Jun 2013 14:56:53 GMT
+recorded_with: VCR 2.5.0
