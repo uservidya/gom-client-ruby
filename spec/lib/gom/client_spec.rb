@@ -6,7 +6,8 @@ describe Gom::Client do
   end
 
   context 'with gom.dev.artcom.de' do 
-    let(:gom)     { Gom::Client.new('http://gom.dev.artcom.de') }
+    #let(:gom)     { Gom::Client.new('http://gom.dev.artcom.de') }
+    let(:gom)     { Gom::Client.new('http://127.0.0.1:3000') }
     #let(:prefix)  { gom.create!("/tests", {}) }
     #let(:prefix)  { "/tests/08ec4b58-38b3-44ac-9ea9-62b42a62b061" }
 
@@ -58,7 +59,7 @@ describe Gom::Client do
 
     it 'raises a 404 on retrieval of non-existing nodes' do
       expect { gom.retrieve! "/no/such/node" }.to raise_error(
-        Gom::HttpError, %r(404 Not Found while GETting /no/such/node)
+        Gom::HttpError, %r(404 Not Found\s+while GETting /no/such/node)
       )
     end
 
@@ -72,7 +73,7 @@ describe Gom::Client do
         expect{gom.destroy auri}.to_not raise_error
         gom.retrieve(auri).should be(nil)
         expect { gom.retrieve!(auri) }.to raise_error(
-          Gom::HttpError, %r(404 Not Found while GETting #{auri})
+          Gom::HttpError, %r(404 Not Found\s+while GETting #{auri})
         )
       end
 
@@ -81,10 +82,10 @@ describe Gom::Client do
         gom.retrieve(nuri).should be(nil)
 
         expect { gom.retrieve!(nuri) }.to raise_error(
-          Gom::HttpError, %r(404 Not Found while GETting #{nuri})
+          Gom::HttpError, %r(404 Not Found\s+while GETting #{nuri})
         )
         expect { gom.retrieve!(auri) }.to raise_error(
-          Gom::HttpError, %r(404 Not Found while GETting #{auri})
+          Gom::HttpError, %r(404 Not Found\s+while GETting #{auri})
         )
       end
 
@@ -96,23 +97,73 @@ describe Gom::Client do
         expect { gom.destroy!(auri) }.to_not raise_error
       end
     end
+
+    context 'running scripts' do
+      it 'raises on script AND path over-specified request' do
+        expect { 
+          gom.run_script(:script => "something", :path  => "something else")
+        }.to raise_error(
+          ArgumentError, %r(must not provide script AND path)
+        )
+      end
+        
+      it 'raises on script NOR path under-specified request' do
+        expect { gom.run_script }.to raise_error(
+          ArgumentError, %r(must provide script OR path)
+        )
+      end
+
+
+      it 'runs simple posted script' do
+        # simple script
+        rc = gom.run_script(:script => <<-JS)
+          response.body = "hello";
+          "200 OK";
+        JS
+
+        rc.body.should eq('hello')
+        rc.code.should eq(200)
+      end
+
+      pending 'runs more scripts' do
+        # script with one parameter
+        my_script = <<-JS
+          response.body=params.test;
+          "200 OK";
+        JS
+        my_result = gom.run_script :script => my_script,
+                                       :params => {:test => "param_value"}
+        assert_equal "param_value", my_result.body
+        assert_equal "200",         my_result.code
+        
+        # script with multiple parameters
+        my_script = <<-JS
+          response.body=params.test + ":" + params.test2;
+          "200 OK";
+        JS
+        my_result = gom.run_script :script => my_script,
+                                       :params => {:test  => "param_value",
+                                                   :test2 => "param_valuer"}
+        assert_equal "param_value:param_valuer", my_result.body
+        assert_equal "200",         my_result.code
+        
+        # Script with an error
+        my_script = <<-JS
+          response.body=something_undefined;
+          "200 OK";
+        JS
+        my_exception = assert_raise(RestFs::HttpError) do
+           gom.run_script :script => my_script
+        end
+        
+        assert_equal "500 Internal Server Error while executing server-side-script:\nexception:\nsomething_undefined is not defined at (immediate script):1\n",
+                     my_exception.to_s
+      end
+    end
   end
 end
 
 __END__
-  
-  def test_run_script_validations
-    my_exception = assert_raise(ArgumentError) do
-      @restfs.run_script :script => "something",
-                         :path   => "something else"
-    end
-    assert_equal "must not provide script AND path", my_exception.message
-  
-    my_exception = assert_raise(ArgumentError) do
-      @restfs.run_script
-    end
-    assert_equal "must provide script OR path", my_exception.message
-  end
   
   def test_run_posted_script
     # simple script

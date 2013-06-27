@@ -140,10 +140,13 @@ module Gom
         script and (raise ArgumentError, "must not provide script AND path")
       end
       
-      if my_params.size > 0
-        url = URI.parse("#{@root}/gom/script-runner#{path}?#{my_params.join('&')}")
+      params = params.keys.zip(params.values).map {|k,v| "#{k}=#{v}"}
+      if 0 < params.size
+        #url = URI.parse("#{@root}/gom/script-runner#{path}?#{params.join('&')}")
+        url = URI.parse("#{@root}/gom/script/v8#{path}?#{params.join('&')}")
       else
-        url = URI.parse("#{@root}/gom/script-runner#{path}")
+        #url = URI.parse("#{@root}/gom/script-runner#{path}")
+        url = URI.parse("#{@root}/gom/script/v8#{path}")
       end
       
       response = Net::HTTP.start(url.host, url.port) do |http| 
