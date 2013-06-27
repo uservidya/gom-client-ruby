@@ -138,16 +138,11 @@ module Gom
         script.nil? and (raise ArgumentError, "must provide script OR path")
       else
         script and (raise ArgumentError, "must not provide script AND path")
+        params[:_script_path] = path
       end
       
       params = params.keys.zip(params.values).map {|k,v| "#{k}=#{v}"}
-      if 0 < params.size
-        #url = URI.parse("#{@root}/gom/script-runner#{path}?#{params.join('&')}")
-        url = URI.parse("#{@root}/gom/script/v8#{path}?#{params.join('&')}")
-      else
-        #url = URI.parse("#{@root}/gom/script-runner#{path}")
-        url = URI.parse("#{@root}/gom/script/v8#{path}")
-      end
+      url = URI.parse("#{@root}/gom/script/v8?#{params.join('&')}")
       
       response = Net::HTTP.start(url.host, url.port) do |http| 
         if script

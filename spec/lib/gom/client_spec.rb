@@ -98,7 +98,7 @@ describe Gom::Client do
       end
     end
 
-    context 'running scripts' do
+    context 'running server side scripts' do
       it 'raises on script AND path over-specified request' do
         expect { 
           gom.run_script(:script => "something", :path  => "something else")
@@ -113,136 +113,64 @@ describe Gom::Client do
         )
       end
 
+      context 'posted script' do
+        it 'runs simple posted script' do
+          rc = gom.run_script(:script => '"hello"')
+          rc.body.should eq('hello')
+          rc.code.should eq('200')
+        end
 
-      it 'runs simple posted script' do
-        # simple script
-        rc = gom.run_script(:script => <<-JS)
-          response.body = "hello";
-          "200 OK";
-        JS
-
-        rc.body.should eq('hello')
-        rc.code.should eq(200)
+        it 'passes parameter from request to the script' do
+          rc = gom.run_script(script: 'params.test', :params => {test: 'p1'})
+          rc.body.should eq('p1')
+          rc.code.should eq('200')
+        end
+          
+        it 'passes multiple parameter to script' do
+          rc = gom.run_script(script: <<-JS, params: {p1: 'p1', p2: 'p2'})
+            params.p1 + ':' + params.p2
+          JS
+          rc.body.should eq('p1:p2')
+          rc.code.should eq('200')
+        end
+          
+        it 'raises error on broken scripts' do
+          expect { gom.run_script script: 'intentional_error' }.to raise_error(
+            Gom::HttpError, 
+            /400 Bad Request\s+.+intentional_error is not defined/m
+          )
+        end
       end
 
-      pending 'runs more scripts' do
-        # script with one parameter
-        my_script = <<-JS
-          response.body=params.test;
-          "200 OK";
-        JS
-        my_result = gom.run_script :script => my_script,
-                                       :params => {:test => "param_value"}
-        assert_equal "param_value", my_result.body
-        assert_equal "200",         my_result.code
-        
-        # script with multiple parameters
-        my_script = <<-JS
-          response.body=params.test + ":" + params.test2;
-          "200 OK";
-        JS
-        my_result = gom.run_script :script => my_script,
-                                       :params => {:test  => "param_value",
-                                                   :test2 => "param_valuer"}
-        assert_equal "param_value:param_valuer", my_result.body
-        assert_equal "200",         my_result.code
-        
-        # Script with an error
-        my_script = <<-JS
-          response.body=something_undefined;
-          "200 OK";
-        JS
-        my_exception = assert_raise(RestFs::HttpError) do
-           gom.run_script :script => my_script
+      context 'stored scripts' do
+        let(:script_uri) { uniq_attr_uri }
+
+        it 'runs a simple stored script' do
+          gom.update(script_uri, '"hello"')
+          rc = gom.run_script(path: script_uri)
+          rc.body.should eq('hello')
+          rc.code.should eq('200')
         end
-        
-        assert_equal "500 Internal Server Error while executing server-side-script:\nexception:\nsomething_undefined is not defined at (immediate script):1\n",
-                     my_exception.to_s
+
+        it 'passes parameter from request to the script' do
+          gom.update(script_uri, 'params.p1')
+          rc = gom.run_script(path: script_uri, :params => {p1: 'p1'})
+          rc.body.should eq('p1')
+          rc.code.should eq('200')
+        end
+          
+        it 'passes multiple parameter to script' do
+          gom.update(script_uri, "params.p1 + ':' + params.p2")
+          rc = gom.run_script(path: script_uri, params: {p1: 'p1', p2: 'p2'})
+          rc.body.should eq('p1:p2')
+          rc.code.should eq('200')
+        end
       end
     end
   end
 end
 
 __END__
-  
-  def test_run_posted_script
-    # simple script
-    my_script = <<-JS
-      response.body="hello";
-      "200 OK";
-    JS
-    my_result = @restfs.run_script :script => my_script
-    assert_equal "hello", my_result.body
-    assert_equal "200",   my_result.code
-    
-    # script with one parameter
-    my_script = <<-JS
-      response.body=params.test;
-      "200 OK";
-    JS
-    my_result = @restfs.run_script :script => my_script,
-                                   :params => {:test => "param_value"}
-    assert_equal "param_value", my_result.body
-    assert_equal "200",         my_result.code
-    
-    # script with multiple parameters
-    my_script = <<-JS
-      response.body=params.test + ":" + params.test2;
-      "200 OK";
-    JS
-    my_result = @restfs.run_script :script => my_script,
-                                   :params => {:test  => "param_value",
-                                               :test2 => "param_valuer"}
-    assert_equal "param_value:param_valuer", my_result.body
-    assert_equal "200",         my_result.code
-    
-    # Script with an error
-    my_script = <<-JS
-      response.body=something_undefined;
-      "200 OK";
-    JS
-    my_exception = assert_raise(RestFs::HttpError) do
-       @restfs.run_script :script => my_script
-    end
-    
-    assert_equal "500 Internal Server Error while executing server-side-script:\nexception:\nsomething_undefined is not defined at (immediate script):1\n",
-                 my_exception.to_s
-  end
-  
-  def test_run_stored_script
-    # simple script
-    my_script = <<-JS
-      response.body="hello";
-      "200 OK";
-    JS
-    @restfs.update("#{@prefix}:my_stored_script", my_script)
-    my_result = @restfs.run_script :path => "#{@prefix}/my_stored_script"
-    assert_equal "hello", my_result.body
-    assert_equal "200",   my_result.code
-    
-    #one parameter
-    my_script = <<-JS
-      response.body=params.test;
-      "200 OK";
-    JS
-    @restfs.update("#{@prefix}:my_stored_script", my_script)
-    my_result = @restfs.run_script :path => "#{@prefix}/my_stored_script",
-                                   :params => {:test => "param_value"}
-    assert_equal "param_value", my_result.body
-    assert_equal "200",         my_result.code
-    
-    # script with multiple parameters
-    my_script = <<-JS
-      response.body=params.test + ":" + params.test2;
-      "200 OK";
-    JS
-    @restfs.update("#{@prefix}:my_stored_script", my_script)
-    my_result = @restfs.run_script :path => "#{@prefix}/my_stored_script",
-                                   :params => {:test  => "param_value",
-                                               :test2 => "param_valuer"}
-    assert_equal "param_value:param_valuer", my_result.body
-    assert_equal "200",         my_result.code
-  end
   
   def test_register_observer_invalid_arguments
     my_node     = "/testerino"
