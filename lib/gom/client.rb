@@ -201,20 +201,19 @@ module Gom
 
     private
 
-      def is_attribute?(the_path)
-        not the_path.index(":").nil?
-      end
+    def is_attribute?(the_path)
+      not the_path.index(":").nil?
+    end
 
-      def attributes_to_xml(hash={})
-        doc  = REXML::Document.new
-        node = doc.add_element 'node'
-        hash.each do | key, value |
-          attrib = node.add_element 'attribute'
-          attrib.attributes['name'] = key
-          attrib.text = value
-        end
-        doc.to_s
+    def attributes_to_xml(hash={})
+      doc  = REXML::Document.new
+      node = doc.add_element 'node'
+      hash.each do |key, value|
+        attrib = node.add_element 'attribute'
+        attrib.attributes['name'] = key
+        attrib.text = value
       end
-
+      doc.to_s
+    end
   end
 end
