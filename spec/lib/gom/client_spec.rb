@@ -11,7 +11,6 @@ describe Gom::Client do
     #let(:prefix)  { gom.create!("/tests", {}) }
     #let(:prefix)  { "/tests/08ec4b58-38b3-44ac-9ea9-62b42a62b061" }
 
-
     it 'creates and retrieves new node with no attributes' do
       (uri = gom.create!("/tests/1", {})).should match(%r(/tests/1/\w+))
       (hash = gom.retrieve uri).should be_kind_of(Hash)
@@ -55,6 +54,33 @@ describe Gom::Client do
       (hash = gom.retrieve uri).should be_kind_of(Hash)
       hash[:attribute].should be
       hash[:attribute][:value].should eq(val)
+    end
+
+    it 'updates attribute containing ampersand' do
+      uri = uniq_attr_uri
+      val = 'Hallo & Ciao'
+      (gom.update uri, val).should eq(val)
+      (hash = gom.retrieve uri).should be_kind_of(Hash)
+      hash[:attribute].should be
+      hash[:attribute][:value].should eq(val)
+    end
+
+    it 'updates existing attribute to empty value' do
+      uri = uniq_attr_uri
+      gom.update(uri, "something")
+
+      gom.update uri, ""
+      (hash = gom.retrieve uri).should be_kind_of(Hash)
+      hash[:attribute].should be
+      hash[:attribute][:value].should eq('')
+    end
+
+    it 'updates new attribute to empty value' do
+      uri = uniq_attr_uri
+      gom.update(uri, '')
+      (hash = gom.retrieve uri).should be_kind_of(Hash)
+      hash[:attribute].should be
+      hash[:attribute][:value].should eq('')
     end
 
     it 'raises a 404 on retrieval of non-existing nodes' do
@@ -266,20 +292,3 @@ __END__
     assert_equal nil,                @restfs.retrieve("#{my_observer}:condition_script")
     @restfs.destroy my_observer
   end
-
-  def test_update_attr_containing_ampersand
-    @restfs.update "#{@prefix}:my_attr", "Hallo & Ciao"
-    assert_equal "Hallo & Ciao", @restfs.retrieve("#{@prefix}:my_attr")[:attribute][:value]
-  end
-
-  def test_update_attr_to_empty_value
-    @restfs.update "#{@prefix}:my_attr", "something"
-    assert_equal "something", @restfs.retrieve("#{@prefix}:my_attr")[:attribute][:value]
-    
-    @restfs.update "#{@prefix}:my_attr", ""
-    assert_equal "", @restfs.retrieve("#{@prefix}:my_attr")[:attribute][:value]
-    
-    @restfs.update "#{@prefix}:my_new_attr", ""
-    assert_equal "", @restfs.retrieve("#{@prefix}:my_new_attr")[:attribute][:value]
-  end
-
