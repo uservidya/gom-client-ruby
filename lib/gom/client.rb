@@ -129,15 +129,16 @@ module Gom
     alias update update!
 
     # supports stored and posted scripts
-    def run_script(options={})
+    def run_script(options = {})
       path   = options[:path]   || nil
       script = options[:script] || nil
       params = options[:params] || {}
       
-      raise ArgumentError, "must provide script OR path" if (path.nil? && script.nil?)
-      raise ArgumentError, "must not provide script AND path" if (path && script)
-      
-      my_params = params.keys.zip(params.values).map {|k,v| "#{k}=#{v}"}
+      if path.nil?
+        script.nil? and (raise ArgumentError, "must provide script OR path")
+      else
+        script and (raise ArgumentError, "must not provide script AND path")
+      end
       
       if my_params.size > 0
         url = URI.parse("#{@root}/gom/script-runner#{path}?#{my_params.join('&')}")
@@ -145,21 +146,24 @@ module Gom
         url = URI.parse("#{@root}/gom/script-runner#{path}")
       end
       
-      if script
-        request = Net::HTTP::Post.new(url.to_s)
-        request.set_content_type "text/javascript"
-        response = Net::HTTP.start(url.host, url.port) do |http| 
+      response = Net::HTTP.start(url.host, url.port) do |http| 
+        if script
+          request = Net::HTTP::Post.new(url.to_s)
+          request.set_content_type "text/javascript"
           http.request(request, script)
-        end
-      else
-        request  = Net::HTTP::Get.new(url.to_s)
-        response = Net::HTTP.start(url.host, url.port) do |http| 
+        else
+          request  = Net::HTTP::Get.new(url.to_s)
           http.request(request)
         end
       end
       
-      return response if response.kind_of?(Net::HTTPSuccess)
-      raise HttpError.new(response, "while executing server-side-script:\n#{response.body}")
+      if response.kind_of?(Net::HTTPSuccess) 
+        return response 
+      else
+        raise HttpError.new(
+          response, "while executing server-side-script:\n#{response.body}"
+        )
+      end
     end
 
     # supports anonymous and named observers
