@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe Gom::Client do 
+describe Gom::Client do
   it 'exists' do
     Gom::Client.should be_kind_of(Class)
   end
 
-  context 'with gom.dev.artcom.de' do 
-    #let(:gom)     { Gom::Client.new('http://gom.dev.artcom.de') }
-    let(:gom)     { Gom::Client.new('http://127.0.0.1:3000') }
+  context 'with gom.dev.artcom.de' do
+    let(:gom)     { Gom::Client.new('http://gom.dev.artcom.de') }
+    #let(:gom)     { Gom::Client.new('http://127.0.0.1:3000') }
     #let(:prefix)  { gom.create!("/tests", {}) }
     #let(:prefix)  { "/tests/08ec4b58-38b3-44ac-9ea9-62b42a62b061" }
 
@@ -36,7 +36,7 @@ describe Gom::Client do
       hash[:attribute][:value].should eq('23')
     end
 
-    context 'with parent node' do 
+    context 'with parent node' do
       let(:nuri) { uniq_node_uri }
       before(:each) { gom.update nuri }
 
@@ -46,7 +46,7 @@ describe Gom::Client do
         h[:status].should eq(200)
       end
     end
-  
+
     it 'updates and retrieves attributes' do
       uri = uniq_attr_uri
       val = 'some text'
@@ -126,13 +126,13 @@ describe Gom::Client do
 
     context 'running server side scripts' do
       it 'raises on script AND path over-specified request' do
-        expect { 
+        expect {
           gom.run_script(:script => "something", :path  => "something else")
         }.to raise_error(
           ArgumentError, %r(must not provide script AND path)
         )
       end
-        
+
       it 'raises on script NOR path under-specified request' do
         expect { gom.run_script }.to raise_error(
           ArgumentError, %r(must provide script OR path)
@@ -151,7 +151,7 @@ describe Gom::Client do
           rc.body.should eq('p1')
           rc.code.should eq('200')
         end
-          
+
         it 'passes multiple parameter to script' do
           rc = gom.run_script(script: <<-JS, params: {p1: 'p1', p2: 'p2'})
             params.p1 + ':' + params.p2
@@ -159,10 +159,10 @@ describe Gom::Client do
           rc.body.should eq('p1:p2')
           rc.code.should eq('200')
         end
-          
+
         it 'raises error on broken scripts' do
           expect { gom.run_script script: 'intentional_error' }.to raise_error(
-            Gom::HttpError, 
+            Gom::HttpError,
             /400 Bad Request\s+.+intentional_error is not defined/m
           )
         end
@@ -184,7 +184,7 @@ describe Gom::Client do
           rc.body.should eq('p1')
           rc.code.should eq('200')
         end
-          
+
         it 'passes multiple parameter to script' do
           gom.update(script_uri, "params.p1 + ':' + params.p2")
           rc = gom.run_script(path: script_uri, params: {p1: 'p1', p2: 'p2'})
@@ -193,73 +193,75 @@ describe Gom::Client do
         end
       end
     end
+
+    context 'observer registrations' do
+      let(:cb_url) { 'http://localhost:4042/notification' }
+
+      it 'raises on no args at all' do
+        expect { gom.register_observer }.to raise_error(
+          ArgumentError, /callback_url must not be nil/
+        )
+      end
+
+      it 'raises on missing target node argument' do
+        expect { gom.register_observer(callback_url: cb_url) }.to raise_error(
+          ArgumentError, /node must not be nil/
+        )
+      end
+
+      it 'raises on invalid format' do
+        args = { callback_url: cb_url, node: '/some/node', format: 'Excel' }
+        expect { gom.register_observer(args) }.to raise_error(
+          ArgumentError, /invalid format: '#{args[:format]}'/
+        )
+      end
+
+      context 'unnamed' do
+        let(:node_uri) { uniq_node_uri }
+
+        it 'registers with node and callback' do
+          obs = gom.register_observer(node: node_uri, callback_url: cb_url)
+          obs.should match %r(/gom/observer#{node_uri}/\..+)
+          gom.retrieve_val("#{obs}:observed_uri").should eq(node_uri)
+          gom.retrieve_val("#{obs}:callback_url").should eq(cb_url)
+          gom.retrieve_val("#{obs}:accept").should eq("application/json")
+          gom.retrieve("#{obs}:operations").should be_nil
+          gom.retrieve("#{obs}:uri_regexp").should be_nil
+          gom.retrieve("#{obs}:condition_script").should be_nil
+          expect { gom.destroy obs }.to_not raise_error
+        end
+
+        it 'registers with filters, node and callback' do
+          obs = gom.register_observer(
+            node: node_uri, callback_url: cb_url, filters: {
+              'operations' => 'update,create',
+              'uri_regexp' => '*',
+              'condition_script' => '1 === 1;'
+            }
+          )
+
+          obs.should match %r(/gom/observer#{node_uri}/\..+)
+          gom.retrieve_val("#{obs}:observed_uri").should eq(node_uri)
+          gom.retrieve_val("#{obs}:callback_url").should eq(cb_url)
+          gom.retrieve_val("#{obs}:accept").should eq("application/json")
+          gom.retrieve_val("#{obs}:operations").should eq('update,create')
+          gom.retrieve_val("#{obs}:uri_regexp").should eq('*')
+          gom.retrieve_val("#{obs}:condition_script").should eq('1 === 1;')
+
+          expect { gom.destroy obs }.to_not raise_error
+        end
+      end
+    end
   end
 end
 
 __END__
-  
-  def test_register_observer_invalid_arguments
-    my_node     = "/testerino"
-    my_callback = "http://localhost:4042/notification"
-    
-    my_exception = assert_raise(ArgumentError) do 
-      @restfs.register_observer
-    end
-    assert_equal 'callback_url must not be nil', my_exception.message
-    
-    my_exception = assert_raise(ArgumentError) do 
-      @restfs.register_observer :callback_url => my_callback
-    end
-    assert_equal 'node must not be nil', my_exception.message
-    
-    my_exception = assert_raise(ArgumentError) do 
-      @restfs.register_observer :callback_url => my_callback,
-                                :node         => my_node,
-                                :format       => "Excel"
-    end
-    assert_equal 'invalid format', my_exception.message
-  end
-  
-  def test_register_unnamed_observer
-    my_node     = "/testerino"
-    my_callback = "http://localhost:4042/notification"
-    
-    # with node and callback_url
-    my_observer = @restfs.register_observer :node         => my_node,
-                                            :callback_url => my_callback
-    assert_equal true, my_observer.start_with?("/gom/observer#{my_node}/.")
-    assert_equal true, my_observer.size > "/gom/observer#{my_node}/.".size
-    assert_equal my_node,            @restfs.retrieve("#{my_observer}:observed_uri")[:attribute][:value]
-    assert_equal my_callback,        @restfs.retrieve("#{my_observer}:callback_url")[:attribute][:value]
-    assert_equal "application/json", @restfs.retrieve("#{my_observer}:accept")[:attribute][:value]
-    assert_equal nil,                @restfs.retrieve("#{my_observer}:operations")
-    assert_equal nil,                @restfs.retrieve("#{my_observer}:uri_regexp")
-    assert_equal nil,                @restfs.retrieve("#{my_observer}:condition_script")
-    @restfs.destroy my_observer
-    
-    # with node, callback_url and filters
-    my_observer = @restfs.register_observer :node         => my_node,
-                                            :callback_url => my_callback,
-                                            :filters      => { "operations" => "update,create",
-                                                               "uri_regexp" => "*",
-                                                               'condition_script' => "response.body = 'hello';'200 OK';" }
-    assert_equal true, my_observer.start_with?("/gom/observer#{my_node}/.")
-    assert_equal true, my_observer.size > "/gom/observer#{my_node}/.".size
-    assert_equal my_node,            @restfs.retrieve("#{my_observer}:observed_uri")[:attribute][:value]
-    assert_equal my_callback,        @restfs.retrieve("#{my_observer}:callback_url")[:attribute][:value]
-    assert_equal "application/json", @restfs.retrieve("#{my_observer}:accept")[:attribute][:value]
-    assert_equal 'update,create',    @restfs.retrieve("#{my_observer}:operations")[:attribute][:value]
-    assert_equal '*',                @restfs.retrieve("#{my_observer}:uri_regexp")[:attribute][:value]
-    assert_equal "response.body = 'hello';'200 OK';",
-                 @restfs.retrieve("#{my_observer}:condition_script")[:attribute][:value]
-    @restfs.destroy my_observer
-  end
-  
+
   def test_register_named_observer
     my_node          = "/testerino"
     my_callback      = "http://localhost:4042/notification"
     my_observer_name = "my_test_observer_name"
-    
+
     # with node, callback_url and filters
     my_observer = @restfs.register_observer :name         => my_observer_name,
                                             :node         => my_node,
@@ -276,7 +278,7 @@ __END__
     assert_equal "response.body = 'hello';'200 OK';",
                  @restfs.retrieve("#{my_observer}:condition_script")[:attribute][:value]
     @restfs.destroy my_observer
-    
+
     # with node and callback_url
     # This also tests that the observer should be deleted before recreating it
     # with the same name
