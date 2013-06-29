@@ -27,6 +27,11 @@ module Gom
       @root = URI.parse(gom_root)
     end
 
+
+    def retrieve_val(path_or_uri) 
+      retrieve(path_or_uri)[:attribute][:value]
+    end
+
     def retrieve(path_or_uri, redirect_limit=10)
       self.retrieve! path_or_uri, redirect_limit
       rescue Gom::HttpError => e
@@ -172,9 +177,11 @@ module Gom
       filters      = options[:filters]      || {}
       format       = options[:format]       || "application/json"
       
-      raise ArgumentError, "callback_url must not be nil" if callback_url.nil?
-      raise ArgumentError, "node must not be nil" if node.nil?
-      raise ArgumentError, "invalid format" unless ['application/json', 'application/xml'].include?(format)
+      callback_url.nil? and (raise ArgumentError, "callback_url must not be nil")
+      node.nil? and (raise ArgumentError, "node must not be nil")
+      unless ['application/json', 'application/xml'].include?(format)
+        raise ArgumentError, "invalid format: '#{format}'"
+      end
       
       url       = URI.parse("#{@root}/gom/observer#{node}")
       form_data = { 'callback_url' => callback_url,
