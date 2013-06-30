@@ -6,19 +6,26 @@ require 'webmock/rspec'
 require 'vcr'
 
 module SpecHelpers
-  def uniq_node_uri
-    t = Time.now
-    uri = "/some/random/node/n#{t.tv_sec}_#{t.tv_usec}"
+
+  def next_uniq_seq_no
+    $__uniq_seq_no += 1
   end
-  def uniq_attr_uri
-    t = Time.now
-    uri = "/some/random/node/n#{t.tv_usec}:a#{t.tv_usec}"
+  def uniq_node_uri(seq_no = next_uniq_seq_no)
+    #t = Time.now
+    #uri = "/some/random/node/n#{t.tv_sec}_#{t.tv_usec}"
+    uri = "/test/node/n#{seq_no}"
+  end
+  def uniq_attr_uri(seq_no = next_uniq_seq_no)
+    #t = Time.now
+    #uri = "/some/random/node/n#{t.tv_usec}:a#{t.tv_usec}"
+    uri = "/test/node/n#{seq_no}:a#{seq_no}"
   end
 end
 
 
 RSpec.configure do |config|
 
+  $__uniq_seq_no = 1
   config.include SpecHelpers
 
   VCR.configure do |c|

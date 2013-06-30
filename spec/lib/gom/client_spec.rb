@@ -5,17 +5,18 @@ describe Gom::Client do
     Gom::Client.should be_kind_of(Class)
   end
 
-  context 'with gom.dev.artcom.de' do
+  context 'VCR cassette' do
     #let(:gom)     { Gom::Client.new('http://gom.dev.artcom.de') }
     let(:gom)     { Gom::Client.new('http://127.0.0.1:3000') }
     #let(:prefix)  { gom.create!("/tests", {}) }
     #let(:prefix)  { "/tests/08ec4b58-38b3-44ac-9ea9-62b42a62b061" }
 
     before(:all) {
+     VCR.insert_cassette('127.0.0.1:3000', :record => :new_episodes)
      # VCR.insert_cassette('gom.dev.artcom.de', :record => :new_episodes)
     }
     after(:all) {
-     # VCR.eject_cassette
+     VCR.eject_cassette
     }
 
     it 'creates and retrieves new node with no attributes' do
@@ -99,7 +100,7 @@ describe Gom::Client do
     context 'destroying things' do
       let(:nuri) { uniq_node_uri }
       let(:auri) { "#{nuri}:foo" }
-      let(:val) { Time.now.to_s }
+      let(:val) { "wello horld!" }
       before(:each) { (gom.update auri, val).should eq(val) }
 
       it 'destroys attributes' do
@@ -261,12 +262,9 @@ describe Gom::Client do
 
       context 'named observer' do
         let(:target_uri) { uniq_node_uri }
-        let(:name) { "o#{Time.now.tv_usec}" }
+        let(:name) { "o1234" } ##{Time.now.tv_usec}" }
 
         it 'supports filters' do
-          my_callback      = "http://localhost:4042/notification"
-          obs_name = "my_test_observer_name"
-
           # with node, callback_url and filters
           obs = gom.register_observer(
             name: name, node: target_uri, callback_url: cb_url, filters: {

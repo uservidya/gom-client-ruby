@@ -1,0 +1,4469 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://127.0.0.1:3000/tests/1
+    body:
+      encoding: US-ASCII
+      string: <node/>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 303
+      message: ! 'See Other '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Location:
+      - http://127.0.0.1:3000/tests/1/6A6C5FC8-D8BA-478F-AC48-ADF0D13EF7CA
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - f7ea8e9ca279d3a7bdae3fb2c7383b2d
+      X-Runtime:
+      - '0.104473'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '132'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="http://127.0.0.1:3000/tests/1/6A6C5FC8-D8BA-478F-AC48-ADF0D13EF7CA">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/tests/1/6A6C5FC8-D8BA-478F-AC48-ADF0D13EF7CA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"0c6be958174bea1293c4f900d0b4d590"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4c0badb8863ca20c5071322a6b81cc4a
+      X-Runtime:
+      - '0.012565'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '193'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"node\": {\n    \"uri\": \"/tests/1/6A6C5FC8-D8BA-478F-AC48-ADF0D13EF7CA\",\n
+        \   \"mtime\": \"2013-07-01T01:03:40+02:00\",\n    \"ctime\": \"2013-07-01T01:03:40+02:00\",\n
+        \   \"entries\": [\n      \n    ]\n  }\n}"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:3000/tests/2
+    body:
+      encoding: US-ASCII
+      string: <node><attribute name='x'>u</attribute><attribute name='a'>23</attribute></node>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 303
+      message: ! 'See Other '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Location:
+      - http://127.0.0.1:3000/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b92a2c5ca3f01d3a507bd3a5f1fafa5d
+      X-Runtime:
+      - '0.151018'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '132'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="http://127.0.0.1:3000/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"b3f4a06f755e593918205a1859f60977"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7772758b325fb18ba61bfa750e169b88
+      X-Runtime:
+      - '0.033527'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '614'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"node\": {\n    \"uri\": \"/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E\",\n
+        \   \"mtime\": \"2013-07-01T01:03:40+02:00\",\n    \"ctime\": \"2013-07-01T01:03:40+02:00\",\n
+        \   \"entries\": [\n      { \"attribute\": {\n  \"name\": \"a\",\n  \"node\":
+        \"/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E\",\n  \"value\": \"23\",\n
+        \ \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:40+02:00\",\n  \"ctime\":
+        \"2013-07-01T01:03:40+02:00\"\n} }\n,\n{ \"attribute\": {\n  \"name\": \"x\",\n
+        \ \"node\": \"/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E\",\n  \"value\":
+        \"u\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:40+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:40+02:00\"\n} }    ]\n  }\n}"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E:x
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"f97c465c5a8424e32029ba3ad63d5a23"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fff55b54ce4e59f58c0aa22e1bfaf21c
+      X-Runtime:
+      - '0.012917'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '210'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"x\",\n  \"node\": \"/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E\",\n
+        \ \"value\": \"u\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:40+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:40+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E:a
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"78ac36bfd8596c23933256aefdcc6764"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4d6df21fa0e560453a187a116d3d13a9
+      X-Runtime:
+      - '0.012437'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '211'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"a\",\n  \"node\": \"/tests/2/CD5F0F04-7199-450A-B48F-35D9B934FB1E\",\n
+        \ \"value\": \"23\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:40+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:40+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n2:a2
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>some text</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"552e21cd4cd9918678e3c1a0df491bc3"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d8e2902705abfeb78e5ceba9701420ef
+      X-Runtime:
+      - '0.012495'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '9'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: some text
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/test/node/n2:a2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"af0b9702a09acb6259b3e8ec4e0181e0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4d3ad716d01f6aecce5a85099e53a06e
+      X-Runtime:
+      - '0.016337'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '187'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"a2\",\n  \"node\": \"/test/node/n2\",\n
+        \ \"value\": \"some text\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:40+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:40+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n3:a3
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>Hallo &amp; Ciao</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"0d2861d053d860ba727223bd3e132cb0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 62f1fdc040e050748354a14e36748f16
+      X-Runtime:
+      - '0.014168'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '12'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: Hallo & Ciao
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/test/node/n3:a3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"233d7ca93964c3d262289e5777ed8780"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a1b08b6ee08dd1710ecaeb88fd8dabc2
+      X-Runtime:
+      - '0.017631'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '190'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"a3\",\n  \"node\": \"/test/node/n3\",\n
+        \ \"value\": \"Hallo & Ciao\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:40+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:40+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n4:a4
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>something</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"437b930db84b8079c2dd804a71936b5f"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 02b0b56f13d5cc86dfa4719af47a18df
+      X-Runtime:
+      - '0.012634'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '9'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: something
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n4:a4
+    body:
+      encoding: US-ASCII
+      string: attribute=&type=string
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 9a29a8d17cb09eec7fe1d60c97642a1b
+      X-Runtime:
+      - '0.012538'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/test/node/n4:a4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c14af032bdaf2b10ce35d70e37dcf2a2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2954af13ad80dc40881b5e489f28f7e4
+      X-Runtime:
+      - '0.013792'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '178'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"a4\",\n  \"node\": \"/test/node/n4\",\n
+        \ \"value\": \"\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:40+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:40+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n5:a5
+    body:
+      encoding: US-ASCII
+      string: attribute=&type=string
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 69210e6e1062a61dfcedd588c802cec6
+      X-Runtime:
+      - '0.010439'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/test/node/n5:a5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"b30f38f5ffafb90adf432553228d0e96"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 574b9ea4500a04a51872eb93a1d46071
+      X-Runtime:
+      - '0.016315'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '178'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"a5\",\n  \"node\": \"/test/node/n5\",\n
+        \ \"value\": \"\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:40+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:40+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/no/such/node
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 10c46912349a36464040352f01335b8f
+      X-Runtime:
+      - '0.005239'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '291'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /no/such/node</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/no/such/node&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n6
+    body:
+      encoding: US-ASCII
+      string: <node/>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"1182ba823378847aefefaf91205125a3"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d3d755c7c63fa9b5a20d63546a13e445
+      X-Runtime:
+      - '0.090004'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:40 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": 200}'
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:40 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n6
+    body:
+      encoding: US-ASCII
+      string: <node><attribute name='foo1'>val1</attribute><attribute name='foo2'>val2</attribute></node>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"1182ba823378847aefefaf91205125a3"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1bf78f73551ffce88afdafa66f1724de
+      X-Runtime:
+      - '0.039566'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": 200}'
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n7:foo
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>wello horld!</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c5fd333a772d5ce6e1a67720534bc4c6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0946e1f1911c9493cde28f949cc5378f
+      X-Runtime:
+      - '0.011345'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '12'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: wello horld!
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/test/node/n7:foo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"3815ba56876fb6e1525ed5398f1d2ae6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0090909afc009eb5064c1666548bb495
+      X-Runtime:
+      - '0.045856'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '2256'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWM0ODM1Y2UyNWFjMDU2ZjdhYWM4YTQxMGRmYjMzYWRjBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVVlS2RhN09UUUNpc2Z2MkNicHIzcThzMGE3VzVPK2cwNWFWN1B6UTlLTTA9BjsARg%3D%3D--0be3f90cb0521e858aae32bdd6fb878be95e3792;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"UeKda7OTQCisfv2Cbpr3q8s0a7W5O+g05aV7PzQ9KM0=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/test/node/n7:foo\">/test/node/n7:foo</a>\n</h2>\n\n
+        \     </div>\n    </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/test/node/n7:foo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0e016aeb0a52f1de98f9e4d42c46e0a9
+      X-Runtime:
+      - '0.007448'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '299'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /test/node/n7:foo</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/test/node/n7:foo&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/test/node/n7:foo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 5cefa84f14660afbf4dbc6675074216b
+      X-Runtime:
+      - '0.005641'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '299'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /test/node/n7:foo</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/test/node/n7:foo&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n8:foo
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>wello horld!</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c5fd333a772d5ce6e1a67720534bc4c6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e8fce3535ec952bc0360e97431d06c4f
+      X-Runtime:
+      - '0.016486'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '12'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: wello horld!
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/test/node/n8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"5c8cdc8dbc35c429e68c851150957d0b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 615ca58c99b9188ea58f647c072b6545
+      X-Runtime:
+      - '0.032909'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '2248'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWIxMjc1OGRkMzQ2OGU1N2ZhZWUwNmNjN2Q4YTIzMWRhBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMU5nNnlaQW1rd2NmZys0QnFuMmhwKzFFQnhGSzRyUHFmZlZTMllFeFMzMlE9BjsARg%3D%3D--c6fa6ae1ed9e84041dec8b6fd7c29f85e152eacd;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"Ng6yZAmkwcfg+4Bqn2hp+1EBxFK4rPqffVS2YExS32Q=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/test/node/n8\">/test/node/n8</a>\n</h2>\n\n      </div>\n
+        \   </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/test/node/n8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - dc9945a087bc5b21e6f964b1444da387
+      X-Runtime:
+      - '0.006283'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '291'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /test/node/n8</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/test/node/n8&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/test/node/n8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b43ac25510a862e164a4b5b55ff41367
+      X-Runtime:
+      - '0.005568'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '291'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /test/node/n8</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/test/node/n8&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/test/node/n8:foo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 3649fdedf63c8ca374121a3143e7f7af
+      X-Runtime:
+      - '0.004917'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '299'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /test/node/n8:foo</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/test/node/n8:foo&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n9:foo
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>wello horld!</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c5fd333a772d5ce6e1a67720534bc4c6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 68f5cbcb2f66d720b8dade66691a5ce4
+      X-Runtime:
+      - '0.012436'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '12'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: wello horld!
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/test/node/n9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c07ffc7af85c4752ce2050b52e6d78e5"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e4233d350442d890fa926d1118170fa4
+      X-Runtime:
+      - '0.095415'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '2248'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWVkMGE4YjcwMzhkMDI1MTY0ZWZmOTY0NjAwMjlkMDFmBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWNVZlk5QjhSd3FVS3I4YmhqWDU5QkVSMmlTY0wvUDRLZzVuLzJMQzQranM9BjsARg%3D%3D--95a623c72022cbea6ff7ab43026ecdb588793e6c;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"cUfY9B8RwqUKr8bhjX59BER2iScL/P4Kg5n/2LC4+js=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/test/node/n9\">/test/node/n9</a>\n</h2>\n\n      </div>\n
+        \   </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n10:foo
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>wello horld!</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c5fd333a772d5ce6e1a67720534bc4c6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8fad5ceffbc604ac76df8e38cc7d4cf5
+      X-Runtime:
+      - '0.017614'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '12'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: wello horld!
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/test/node/n10:foo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"cb8d601bfa7e111d42f8e732b3091402"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bc6524d9d2ea9a7c331577d064981207
+      X-Runtime:
+      - '0.042180'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '2258'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTViNWQxMjgzZTk4MmY2NzNhMzg5MjhiMDk0ZDIzMjc5BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMTE0Mm1QQytEMkY3aGlESXV3K1lsTTlBcXVuSVVULzQ5Kzhqem5HUVFOTGc9BjsARg%3D%3D--8ba5291f6dd19f7231d605a3ba84db46492cffd4;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"142mPC+D2F7hiDIuw+YlM9AqunIUT/49+8jznGQQNLg=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/test/node/n10:foo\">/test/node/n10:foo</a>\n</h2>\n\n
+        \     </div>\n    </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:3000/gom/script/v8?
+    body:
+      encoding: US-ASCII
+      string: ! '"hello"'
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - text/javascript
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"5d41402abc4b2a76b9719d911017c592"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e070446ad9c271aadca507be56753841
+      X-Runtime:
+      - '0.011568'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '5'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: hello
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:3000/gom/script/v8?test=p1
+    body:
+      encoding: US-ASCII
+      string: params.test
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - text/javascript
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"ec6ef230f1828039ee794566b9c58adc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 81059b7a830210aab4670d3e3ec84a38
+      X-Runtime:
+      - '0.009810'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '2'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: p1
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:3000/gom/script/v8?p1=p1&p2=p2
+    body:
+      encoding: US-ASCII
+      string: ! '            params.p1 + '':'' + params.p2
+
+'
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - text/javascript
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"ed74a61d9ccd2cbe9dff172bce4f7426"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 36c9f2f9e93606a872a73fe8417284ac
+      X-Runtime:
+      - '0.008603'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '5'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: p1:p2
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:3000/gom/script/v8?
+    body:
+      encoding: US-ASCII
+      string: intentional_error
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - text/javascript
+  response:
+    status:
+      code: 400
+      message: ! 'Bad Request '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 8ac340f0290587e0032b586a6995db9b
+      X-Runtime:
+      - '0.035082'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '2464'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTcwYmEwMWMxMjlkNDZmYmRkZGFlYTM2MGRhMGU0ZDlhBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXBubGYwZ1ErZlBqc1Q4VTY4cDJsK0YyeFpKejhxWDA5MDdEMjJrVlJzRXM9BjsARg%3D%3D--9c36344c4c5670e6bcb2b59b249f66f88f5e16d5;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"pnlf0gQ+fPjsT8U68p2l+F2xZJz8qX0907D22kVRsEs=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"v8 controller execute_script_from_request_body action\">\n
+        \       <h1>400 :: Gom::V8Controller::ScriptError: wrapped: intentional_error
+        is not defined</h1>\n\n<p>\n  <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/v8&quot;,
+        &quot;action&quot;=&gt;&quot;execute_script_from_request_body&quot;}\n</p>\n\n
+        \     </div>\n    </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n11:a11
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>&quot;hello&quot;</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"5deaee1c1332199e5b5bc7c5e4f7f0c2"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5acf0578b652b8aace335ac2f2ba3a05
+      X-Runtime:
+      - '0.015198'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '7'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '"hello"'
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/script/v8?_script_path=/test/node/n11:a11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"5d41402abc4b2a76b9719d911017c592"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2fc7679a93b33530f3cfd71e7adae0bc
+      X-Runtime:
+      - '0.009301'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '5'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: hello
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n12:a12
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>params.p1</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"5a14f57d835de9498d3646fd8577ed28"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2d98d7cedd86242ea00bdcd43cf561ba
+      X-Runtime:
+      - '0.013364'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '9'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: params.p1
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/script/v8?_script_path=/test/node/n12:a12&p1=p1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"ec6ef230f1828039ee794566b9c58adc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fcf15a57867fbd655efaef81bbc9b6d2
+      X-Runtime:
+      - '0.009218'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '2'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: p1
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/test/node/n13:a13
+    body:
+      encoding: US-ASCII
+      string: <attribute type='string'>params.p1 + &apos;:&apos; + params.p2</attribute>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - text/plain
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/plain; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"4923e74e8999579f7bf859c267c9ec31"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d0e1b06256d52e78682eec92bd9737d2
+      X-Runtime:
+      - '0.013061'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '27'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: params.p1 + ':' + params.p2
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/script/v8?_script_path=/test/node/n13:a13&p1=p1&p2=p2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"ed74a61d9ccd2cbe9dff172bce4f7426"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7680e347718ec2881886f7aa5877349b
+      X-Runtime:
+      - '0.060135'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '5'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: p1:p2
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n14
+    body:
+      encoding: US-ASCII
+      string: callback_url=http%3A%2F%2Flocalhost%3A4042%2Fnotification&accept=application%2Fjson
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 303
+      message: ! 'See Other '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Location:
+      - http://127.0.0.1:3000/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 10cf850192b834bb357be49dd563c8ca
+      X-Runtime:
+      - '0.039837'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:41 GMT
+      Content-Length:
+      - '152'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="http://127.0.0.1:3000/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:observed_uri
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"56b5c7089cdb077e6749c2ecf179d620"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 64cdcbf9e7497a16b52ab13f19870e2c
+      X-Runtime:
+      - '0.013583'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '254'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"observed_uri\",\n  \"node\": \"/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762\",\n
+        \ \"value\": \"/test/node/n14\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:41+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:41+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:callback_url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"d3023e9786a142f7f25c161b41dc6cce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 23bf01dea1213f577855190d8e984d9a
+      X-Runtime:
+      - '0.012918'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '274'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"callback_url\",\n  \"node\": \"/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762\",\n
+        \ \"value\": \"http://localhost:4042/notification\",\n  \"type\": \"string\",\n
+        \ \"mtime\": \"2013-07-01T01:03:41+02:00\",\n  \"ctime\": \"2013-07-01T01:03:41+02:00\"\n}
+        }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:accept
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"53ff3d346581164bbb1008af1671c4c8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ecc30912997c54abab74a1c00e4e30ef
+      X-Runtime:
+      - '0.013976'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '250'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"accept\",\n  \"node\": \"/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762\",\n
+        \ \"value\": \"application/json\",\n  \"type\": \"string\",\n  \"mtime\":
+        \"2013-07-01T01:03:41+02:00\",\n  \"ctime\": \"2013-07-01T01:03:41+02:00\"\n}
+        }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:operations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0aa818c453ac148ce6764c1963a51535
+      X-Runtime:
+      - '0.004820'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '417'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:operations</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:operations&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:uri_regexp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - cce6ef3ade162f3b9d4e4e9fe90e73e3
+      X-Runtime:
+      - '0.004960'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '417'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:uri_regexp</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:uri_regexp&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:condition_script
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e6118189793e6295a447d885a583fe07
+      X-Runtime:
+      - '0.004809'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '429'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:condition_script</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762:condition_script&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n14/.66F65685-0317-48EC-8E1F-F93CF288B762
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"dff9c7255b392632094d9c01626828dc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 990bc8fb23d160542b0f996b2bf7eb9e
+      X-Runtime:
+      - '0.035710'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '2278'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWZhZTc2NTdhOGI3YWZhNjA4NTkwYTUyNzBjMzY0Y2M3BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMW83bmdYZUJoNlpKMVZwV0JqOGFVUk9LYXNyclVkNGtiSVl0U0tZNDhxaTA9BjsARg%3D%3D--7ebbe074db3f8ff4a1c25bce37934f6cfbd66327;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"o7ngXeBh6ZJ1VpWBj8aUROKasrrUd4kbIYtSKY48qi0=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/gom/observer/test/node/n14/\">/gom/observer/test/node/n14/</a>\n</h2>\n\n
+        \     </div>\n    </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n15
+    body:
+      encoding: US-ASCII
+      string: callback_url=http%3A%2F%2Flocalhost%3A4042%2Fnotification&accept=application%2Fjson&operations=update%2Ccreate&uri_regexp=*&condition_script=1+%3D%3D%3D+1%3B
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 303
+      message: ! 'See Other '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Location:
+      - http://127.0.0.1:3000/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 73149d6101b7b47ac7eb28ce1e29c1be
+      X-Runtime:
+      - '0.052044'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '152'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="http://127.0.0.1:3000/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F:observed_uri
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"69c0d16fad5bcebee0e784149a6eddb8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9da9485039d93c5221d279535a6acd26
+      X-Runtime:
+      - '0.013680'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '254'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"observed_uri\",\n  \"node\": \"/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F\",\n
+        \ \"value\": \"/test/node/n15\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:42+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:42+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F:callback_url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"295d63b4fa77c135d8ca9904cf1fa682"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4178cfd63f94a8a1622f042666fd963b
+      X-Runtime:
+      - '0.013729'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '274'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"callback_url\",\n  \"node\": \"/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F\",\n
+        \ \"value\": \"http://localhost:4042/notification\",\n  \"type\": \"string\",\n
+        \ \"mtime\": \"2013-07-01T01:03:42+02:00\",\n  \"ctime\": \"2013-07-01T01:03:42+02:00\"\n}
+        }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F:accept
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"2f87de6ec214c3d88333823b5973233a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9eee4df4ceea84527dd0f5dc22d962c9
+      X-Runtime:
+      - '0.013276'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '250'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"accept\",\n  \"node\": \"/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F\",\n
+        \ \"value\": \"application/json\",\n  \"type\": \"string\",\n  \"mtime\":
+        \"2013-07-01T01:03:42+02:00\",\n  \"ctime\": \"2013-07-01T01:03:42+02:00\"\n}
+        }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F:operations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"6a5f56e2c881e63fb3caf07627808cb8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 47629806c8fa009102955a65780370ef
+      X-Runtime:
+      - '0.013761'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '251'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"operations\",\n  \"node\": \"/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F\",\n
+        \ \"value\": \"update,create\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:42+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:42+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F:uri_regexp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c1a24faa742b4db646e4d91f89ed0523"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b23fe8c0f0020de94d098d3d80bf394d
+      X-Runtime:
+      - '0.013046'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '239'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"uri_regexp\",\n  \"node\": \"/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F\",\n
+        \ \"value\": \"*\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:42+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:42+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F:condition_script
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c0749fb7628819324e96b46793b12113"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2a549a837c347b5df2fa4613bb5a6efb
+      X-Runtime:
+      - '0.012743'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '252'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"condition_script\",\n  \"node\":
+        \"/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F\",\n  \"value\":
+        \"1 === 1;\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:42+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:42+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n15/.1E486255-6FFB-4F09-85E4-0DC49EAC0D9F
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"327577441ec622de81dae913f6a6bf91"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e25993e3ceb878af36bfad99e171f723
+      X-Runtime:
+      - '0.035978'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '2278'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWJlN2FmOGE1MDFhZDc0MjA5ODdlZjVjN2ZkMjVkN2E2BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVRZUjZLWm1rdnE4c3oyZms2RTJOVXMyaERzek9qWmZYdlhQT1RJNWJDdlU9BjsARg%3D%3D--cba7a91b6799b1171592219bfbfbedc2e3e70fc8;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"TYR6KZmkvq8sz2fk6E2NUs2hDszOjZfXvXPOTI5bCvU=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/gom/observer/test/node/n15/\">/gom/observer/test/node/n15/</a>\n</h2>\n\n
+        \     </div>\n    </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"981ab6bc02a69637e70b076cb2de3699"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7e5383ed2b6c4c7aed072df89b7fde6d
+      X-Runtime:
+      - '0.045262'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '2278'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJThiMDBkNDVkOTllYTZiYmU4MjE4ZWViN2Y2M2U3ZTAzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXdSSVdGSHFiVG5JSjNzbk1XS1c5SEd5RDNUWDFYMnFnT2F1d2I3V3VSVk09BjsARg%3D%3D--567aaecc8536fd99d7c50a614578940f80398d1d;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"wRIWFHqbTnIJ3snMWKW9HGyD3TX1X2qgOauwb7WuRVM=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/gom/observer/test/node/n16/\">/gom/observer/test/node/n16/</a>\n</h2>\n\n
+        \     </div>\n    </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234
+    body:
+      encoding: US-ASCII
+      string: <node><attribute name='callback_url'>http://localhost:4042/notification</attribute><attribute
+        name='accept'>application/json</attribute><attribute name='operations'>update,create</attribute><attribute
+        name='uri_regexp'>*</attribute><attribute name='condition_script'>1 === 1;</attribute><attribute
+        name='observed_uri'>/test/node/n16</attribute></node>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"1182ba823378847aefefaf91205125a3"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 563c3be5c67bc6772ebade0162e1d17c
+      X-Runtime:
+      - '0.133325'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": 200}'
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:observed_uri
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"dc03b5194a59a23bbd93ae7b3bcd3d62"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4764e21f08a63d231d82ac4375a10709
+      X-Runtime:
+      - '0.013538'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '223'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"observed_uri\",\n  \"node\": \"/gom/observer/test/node/n16/.o1234\",\n
+        \ \"value\": \"/test/node/n16\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:42+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:42+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:callback_url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"3da9fc7c07c927a9531aae380c6e9019"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dc24f5d9c3a160b668a3c1f02c728a52
+      X-Runtime:
+      - '0.013259'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '243'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"callback_url\",\n  \"node\": \"/gom/observer/test/node/n16/.o1234\",\n
+        \ \"value\": \"http://localhost:4042/notification\",\n  \"type\": \"string\",\n
+        \ \"mtime\": \"2013-07-01T01:03:42+02:00\",\n  \"ctime\": \"2013-07-01T01:03:42+02:00\"\n}
+        }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:accept
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"5ff1c3d29aca0b1f635bc30bffb99513"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 188a5f09ac22a55971dcd019e4ade852
+      X-Runtime:
+      - '0.013345'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '219'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"accept\",\n  \"node\": \"/gom/observer/test/node/n16/.o1234\",\n
+        \ \"value\": \"application/json\",\n  \"type\": \"string\",\n  \"mtime\":
+        \"2013-07-01T01:03:42+02:00\",\n  \"ctime\": \"2013-07-01T01:03:42+02:00\"\n}
+        }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:operations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"533509e0533e25d5197eb68823778c32"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - baac045465fa2c103ab57b89f873da5a
+      X-Runtime:
+      - '0.013258'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '220'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"operations\",\n  \"node\": \"/gom/observer/test/node/n16/.o1234\",\n
+        \ \"value\": \"update,create\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:42+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:42+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:uri_regexp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"ed462b64298a07b4f2e2d00f5ce65761"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 43c0d3d245bcfe9861d05772411e942a
+      X-Runtime:
+      - '0.012629'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '208'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"uri_regexp\",\n  \"node\": \"/gom/observer/test/node/n16/.o1234\",\n
+        \ \"value\": \"*\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:42+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:42+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:condition_script
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"d48c1a088a7fb5855e2ed33ea80bc83c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4f0b49b51665e36ded449b53f62216cd
+      X-Runtime:
+      - '0.012880'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:42 GMT
+      Content-Length:
+      - '221'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"condition_script\",\n  \"node\":
+        \"/gom/observer/test/node/n16/.o1234\",\n  \"value\": \"1 === 1;\",\n  \"type\":
+        \"string\",\n  \"mtime\": \"2013-07-01T01:03:42+02:00\",\n  \"ctime\": \"2013-07-01T01:03:42+02:00\"\n}
+        }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:42 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"4e7e0fdbdf18247eeb931ef7a9947b85"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5f43b334efb72e53ca3dc8b0cf74d98d
+      X-Runtime:
+      - '0.034521'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '2278'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJWUyODExODY0ZDBiODQ3MjU3YjMyNWZlZWE2OWZjM2UxBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXdFb2F1WjFubDhibmNpQ0NtVTlieUxxQk1XdVNUaXVnY3JiY0lRNWpCSVU9BjsARg%3D%3D--3245fc2cb93070bd5df294c7433f5e3c62405784;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"wEoauZ1nl8bnciCCmU9byLqBMWuSTiugcrbcIQ5jBIU=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/gom/observer/test/node/n16/\">/gom/observer/test/node/n16/</a>\n</h2>\n\n
+        \     </div>\n    </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"29ce0706e555dda2cd3e2a04943e7e10"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cc52b635d6f23539994c231100a4634f
+      X-Runtime:
+      - '0.053145'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '2278'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTc2YjkxNmUyMTJjMWU3NzZkZmY3ZWQ4ZTJjMGU4MDU0BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWFUTy9QSDRScndnZUtDaW9ZWnRVQkVMNktoWWZqQ2RzbXc4U282Q0pqL0E9BjsARg%3D%3D--c2567c6178c519893d559379c90de58d86747c53;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"aTO/PH4RrwgeKCioYZtUBEL6KhYfjCdsmw8So6CJj/A=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/gom/observer/test/node/n16/\">/gom/observer/test/node/n16/</a>\n</h2>\n\n
+        \     </div>\n    </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+- request:
+    method: put
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234
+    body:
+      encoding: US-ASCII
+      string: <node><attribute name='callback_url'>http://localhost:4042/notification</attribute><attribute
+        name='accept'>application/json</attribute><attribute name='observed_uri'>/test/node/n16</attribute></node>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"1182ba823378847aefefaf91205125a3"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 91bd3c339ce6212a6a9df6aeb48c1f98
+      X-Runtime:
+      - '0.127647'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '15'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": 200}'
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:observed_uri
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"a3c2e9164db78c3aacbb43643c538e48"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0c5139f558a03145ae024fed8a9e893e
+      X-Runtime:
+      - '0.012818'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '223'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"observed_uri\",\n  \"node\": \"/gom/observer/test/node/n16/.o1234\",\n
+        \ \"value\": \"/test/node/n16\",\n  \"type\": \"string\",\n  \"mtime\": \"2013-07-01T01:03:43+02:00\",\n
+        \ \"ctime\": \"2013-07-01T01:03:43+02:00\"\n} }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:callback_url
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"0d34e2dbaf9aeb232208688ca7dbb1c6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a6cb4371c0bb8ddc2cb1fb2258d3d5c1
+      X-Runtime:
+      - '0.013473'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '243'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"callback_url\",\n  \"node\": \"/gom/observer/test/node/n16/.o1234\",\n
+        \ \"value\": \"http://localhost:4042/notification\",\n  \"type\": \"string\",\n
+        \ \"mtime\": \"2013-07-01T01:03:43+02:00\",\n  \"ctime\": \"2013-07-01T01:03:43+02:00\"\n}
+        }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:accept
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"11c84dc4c5d4eeb159495bdcaf97df91"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c2d28f7d0c55e2a9e9ecbcecdde323cc
+      X-Runtime:
+      - '0.012992'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '219'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "{ \"attribute\": {\n  \"name\": \"accept\",\n  \"node\": \"/gom/observer/test/node/n16/.o1234\",\n
+        \ \"value\": \"application/json\",\n  \"type\": \"string\",\n  \"mtime\":
+        \"2013-07-01T01:03:43+02:00\",\n  \"ctime\": \"2013-07-01T01:03:43+02:00\"\n}
+        }\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:operations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6beadf48d4a86d7f727a9954d6b09ce9
+      X-Runtime:
+      - '0.004662'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '355'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /gom/observer/test/node/n16/.o1234:operations</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/gom/observer/test/node/n16/.o1234:operations&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:uri_regexp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - a2ad03001836fbbe18f8c7c25e7e76a7
+      X-Runtime:
+      - '0.005411'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '355'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /gom/observer/test/node/n16/.o1234:uri_regexp</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/gom/observer/test/node/n16/.o1234:uri_regexp&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234:condition_script
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ! 'Not Found '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - d8a51f5502ee9338658ac7da837238d9
+      X-Runtime:
+      - '0.005081'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '367'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! "<h1>not_found :: Gom::NotFound: not found: /gom/observer/test/node/n16/.o1234:condition_script</h1>\n\n<p>\n
+        \ <b>node path:</b> </p>\n  <b>request params:</b>{&quot;controller&quot;=&gt;&quot;gom/rest&quot;,
+        &quot;action&quot;=&gt;&quot;retrieve&quot;, &quot;uri&quot;=&gt;&quot;/gom/observer/test/node/n16/.o1234:condition_script&quot;,
+        &quot;format&quot;=&gt;nil}\n</p>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:3000/gom/observer/test/node/n16/.o1234
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Depth:
+      - Infinity
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Http-Method-Override
+      Access-Control-Expose-Headers:
+      - Location, Content-Length
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"b48fa0978e8ed1474ffaab4957122ba7"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f5f4dd2dfe63908051320e0738c1034e
+      X-Runtime:
+      - '0.034904'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-02-24)
+      Date:
+      - Sun, 30 Jun 2013 23:03:43 GMT
+      Content-Length:
+      - '2278'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _gom_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTZjNmYzNmEyNGVmMzdiYzk1OTliODBjNmUwMTVhNGI0BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWxPbE1wL3pWVmhRUTFDWnJ0ekhoa0pCT0cwOE4zOVNzWjhpcjJ4OW93REk9BjsARg%3D%3D--25f1caf4c45b077ac748345fd837ca9cdaab418c;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n  <head>\n    <title></title>\n    <link
+        href=\"/assets/application.css?body=1\" media=\"all\" rel=\"stylesheet\" type=\"text/css\"
+        />\n<link href=\"/assets/demo.css?body=1\" media=\"all\" rel=\"stylesheet\"
+        type=\"text/css\" />\n<link href=\"/assets/gom.css?body=1\" media=\"all\"
+        rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/grid.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/ie.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/reset.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/type.css?body=1\"
+        media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\n    <script src=\"/assets/jquery.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/jquery_ujs.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/crockford-sugar.js?body=1\"
+        type=\"text/javascript\"></script>\n<script src=\"/assets/g.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/jsgom2.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/json.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/logger.js?body=1\" type=\"text/javascript\"></script>\n<script
+        src=\"/assets/application.js?body=1\" type=\"text/javascript\"></script>\n
+        \   <meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"lOlMp/zVVhQQ1CZrtzHhkJBOG08N39SsZ8ir2x9owDI=\"
+        name=\"csrf-token\" />\n    \n  </head>\n\n  <body>\n    <div id=\"version-info\">\n
+        \     <ul>\n        <li><em>revision</em>: beta\n | b403efdcc98</li>\n        <li><em>deployed_at</em>:
+        undeployed</li>\n        <li><em>env</em>: development</li>\n      </ul>\n
+        \   </div>\n\n    <div class='main'>\n\n      <div id=\"flash\">\n        <!--
+        the quick brown fox jumps over the lazy dog. -->\n        <!-- yet to be implemented
+        -->\n      </div>\n\n      <div id=\"menu\" style=\"text-align: right\">\n
+        \       <!-- to be defined -->\n        <a href='/gom/profiling/latest'>profiling:</a>\n
+        \       <input name='profile' type='checkbox' value=\"profile!\"/>\n      </div>\n\n\n
+        \     <div class=\"rest controller destroy action\">\n        <h2>GOM Entry
+        deleted:\n  <a href=\"/gom/observer/test/node/n16/\">/gom/observer/test/node/n16/</a>\n</h2>\n\n
+        \     </div>\n    </div>\n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 30 Jun 2013 23:03:43 GMT
+recorded_with: VCR 2.5.0
