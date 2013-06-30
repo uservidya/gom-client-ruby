@@ -6,9 +6,9 @@ require 'gom/client/version'
 require 'json/pure'
 
 module Gom
-  
+
   class HttpError < StandardError
-    attr_reader :response, :description 
+    attr_reader :response, :description
 
     def initialize(http_response, description)
       @response    = http_response
@@ -19,7 +19,7 @@ module Gom
       "#{@response.code} #{@response.message} #{@description}"
     end
   end
-  
+
   class Client
     attr_reader :root
 
@@ -27,9 +27,9 @@ module Gom
       @root = URI.parse(gom_root)
     end
 
-
-    def retrieve_val(path_or_uri) 
-      retrieve(path_or_uri)[:attribute][:value]
+    # returns nil but NOT raise error on non-existing attributes
+    def retrieve_val(path_or_uri)
+      (a = retrieve(path_or_uri)) && a[:attribute][:value]
     end
 
     def retrieve(path_or_uri, redirect_limit=10)
@@ -50,7 +50,7 @@ module Gom
       rescue StandardError => e
         raise HttpError.new(response, "#{e} -- could not parse body: '#{response.body}'")
       end
-      
+
       if (redirect_limit == 0 && response.kind_of?(Net::HTTPRedirection))
         raise "too many redirects"
       end
@@ -67,7 +67,7 @@ module Gom
     def destroy!(path_or_uri)
       uri      = path_or_uri.kind_of?(URI) ? path_or_uri  : URI.parse("#{@root}#{path_or_uri}")
       response = Net::HTTP.new(uri.host, uri.port).delete(uri.path)
-      
+
       return true if response.kind_of?(Net::HTTPSuccess)
       raise HttpError.new(response, "while DELETEing #{uri.path}")
     end
@@ -84,14 +84,14 @@ module Gom
       request_body = attributes_to_xml attributes
       headers      = { 'Content-Type' => 'application/xml' }
       response     = Net::HTTP.new(uri.host, uri.port).request_post(uri.path, request_body, headers)
-      
+
       if response.kind_of?(Net::HTTPRedirection)
         return URI.parse(response['location']).path
       end
 
       raise HttpError.new(response, "while CREATEing (#{uri.path})")
     end
-    
+
     def update!(path_or_uri, hash_or_text=nil)
       uri = path_or_uri.kind_of?(URI) ? path_or_uri : URI.parse("#{@root}#{path_or_uri}")
 
@@ -113,7 +113,7 @@ module Gom
                          'Accept'       => response_format }
           end
       else
-          raise "update node values must be a hash of attributes" unless hash_or_text.nil? or hash_or_text.kind_of?(Hash) 
+          raise "update node values must be a hash of attributes" unless hash_or_text.nil? or hash_or_text.kind_of?(Hash)
           request_body = attributes_to_xml hash_or_text || {}
           response_format = "application/json"
           headers  = { 'Content-Type' => 'application/xml',
@@ -124,7 +124,7 @@ module Gom
       #             'Accept'       => response_format }
 
       response = Net::HTTP.new(uri.host, uri.port).request_put(uri.path, request_body, headers)
-      
+
       return response.body if response.kind_of?(Net::HTTPSuccess) && response_format == "text/plain"
       if response.kind_of?(Net::HTTPSuccess) && response_format == "application/json"
         return JSON.parse(response.body, symbolize_names: true)
@@ -138,18 +138,18 @@ module Gom
       path   = options[:path]   || nil
       script = options[:script] || nil
       params = options[:params] || {}
-      
+
       if path.nil?
         script.nil? and (raise ArgumentError, "must provide script OR path")
       else
         script and (raise ArgumentError, "must not provide script AND path")
         params[:_script_path] = path
       end
-      
+
       params = params.keys.zip(params.values).map {|k,v| "#{k}=#{v}"}
       url = URI.parse("#{@root}/gom/script/v8?#{params.join('&')}")
-      
-      response = Net::HTTP.start(url.host, url.port) do |http| 
+
+      response = Net::HTTP.start(url.host, url.port) do |http|
         if script
           request = Net::HTTP::Post.new(url.to_s)
           request.set_content_type "text/javascript"
@@ -159,9 +159,9 @@ module Gom
           http.request(request)
         end
       end
-      
-      if response.kind_of?(Net::HTTPSuccess) 
-        return response 
+
+      if response.kind_of?(Net::HTTPSuccess)
+        return response
       else
         raise HttpError.new(
           response, "while executing server-side-script:\n#{response.body}"
@@ -176,23 +176,23 @@ module Gom
       node         = options[:node]         || nil
       filters      = options[:filters]      || {}
       format       = options[:format]       || "application/json"
-      
+
       callback_url.nil? and (raise ArgumentError, "callback_url must not be nil")
       node.nil? and (raise ArgumentError, "node must not be nil")
       unless ['application/json', 'application/xml'].include?(format)
         raise ArgumentError, "invalid format: '#{format}'"
       end
-      
+
       url       = URI.parse("#{@root}/gom/observer#{node}")
       form_data = { 'callback_url' => callback_url,
                     'accept'       => format }
       form_data.merge!(filters)
-      
+
       if name
         observer_url = url.path.gsub(/\:/,'/')
         my_uri       = "#{observer_url}/.#{name}"
         destroy my_uri
-        
+
         form_data['observed_uri'] = "#{node}"
         update(my_uri, form_data)
       else
