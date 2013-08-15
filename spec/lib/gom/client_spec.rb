@@ -12,11 +12,11 @@ describe Gom::Client do
     #let(:prefix)  { "/tests/08ec4b58-38b3-44ac-9ea9-62b42a62b061" }
 
     before(:all) {
-     VCR.insert_cassette('127.0.0.1:3000', :record => :new_episodes)
-     # VCR.insert_cassette('gom.dev.artcom.de', :record => :new_episodes)
+      VCR.insert_cassette('127.0.0.1:3000', :record => :new_episodes)
+      # VCR.insert_cassette('gom.dev.artcom.de', :record => :new_episodes)
     }
     after(:all) {
-     VCR.eject_cassette
+      VCR.eject_cassette
     }
 
     it 'creates and retrieves new node with no attributes' do
@@ -58,6 +58,15 @@ describe Gom::Client do
     it 'updates and retrieves attributes' do
       uri = uniq_attr_uri
       val = 'some text'
+      (gom.update uri, val).should eq(val)
+      (hash = gom.retrieve uri).should be_kind_of(Hash)
+      hash[:attribute].should be
+      hash[:attribute][:value].should eq(val)
+    end
+
+    pending 'updates attribute with UTF charachter' do
+      uri = uniq_attr_uri
+      val = 'some UTF text: öäüßÖÄÜ'
       (gom.update uri, val).should eq(val)
       (hash = gom.retrieve uri).should be_kind_of(Hash)
       hash[:attribute].should be
