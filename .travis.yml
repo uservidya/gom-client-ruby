@@ -1,0 +1,17 @@
+language: ruby
+bundler_args: --without development
+before_script:
+script: "bundle exec rspec"
+env:
+  - CI=true
+rvm:
+  - 1.9.3
+  - 2.0.0
+gemfile:
+  - Gemfile
+notifications:
+  recipients:
+    - dirk.luesebrink@artcom.com
+branches:
+  only:
+    - webmock
