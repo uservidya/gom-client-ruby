@@ -3,7 +3,7 @@ require 'net/http'
 #require 'active_support'
 require 'rexml/document'
 require 'gom/client/version'
-require 'json/pure'
+require 'json' #/pure'
 
 module Gom
 
