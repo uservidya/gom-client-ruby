@@ -165,7 +165,7 @@ describe Gom::Client do
         end
 
         it 'passes parameter from request to the script' do
-          rc = gom.run_script(script: 'params.test', :params => { test: 'p1' })
+          rc = gom.run_script(script: 'params.test', params: { test: 'p1' })
           rc.body.should eq('p1')
           rc.code.should eq('200')
         end
