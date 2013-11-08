@@ -20,6 +20,11 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rb-fsevent', '~>0.9.1'
   s.add_development_dependency 'webmock'
   s.add_development_dependency 'vcr'
+  s.add_development_dependency 'rubocop'
+  s.add_development_dependency 'guard-rubocop'
+  s.add_development_dependency 'chromatic'
+  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'simplecov-rcov'
 
   if RUBY_PLATFORM.match /java/i
     s.add_development_dependency 'ruby-debug'

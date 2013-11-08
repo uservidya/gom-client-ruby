@@ -6,3 +6,8 @@ guard 'rspec', all_on_start: true, cli: '--format nested --debug --color' do
   watch('spec/spec_helper.rb')  { "spec" }
   watch('lib/gom/client.rb')    { "spec" }
 end
+
+guard :rubocop, all_on_start: true do
+  watch(%r{.+\.rb$})
+  watch(%r{(?:.+/)?\.rubocop\.yml$}) { |m| File.dirname(m[0]) }
+end

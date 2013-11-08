@@ -1,0 +1,55 @@
+Encoding:
+  Enabled: false
+
+TrailingWhitespace:
+  Enabled: false
+  
+DefWithParentheses:
+  Enabled: false
+
+DefWithoutParentheses:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+# There is a subtle difference between blocks with {...} and do...end.
+# Rubocop does not seem to notice that.
+Blocks:
+  Enabled: false
+
+LeadingCommentSpace:
+  Enabled: true
+
+MethodLength:
+  Enabled: false
+
+CaseEquality:
+  Enabled: false
+
+StringLiterals:
+  Enabled: true
+
+SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Loop:
+  Enabled: false
+
+CollectionMethods:
+  Enabled: false
+
+RedundantReturn:
+  Enabled: true
+
+CommentAnnotation:
+  Enabled: false
+
+AssignmentInCondition:
+  Enabled: false
+
+SignalException:
+  Enabled: false
