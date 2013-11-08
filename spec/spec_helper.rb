@@ -35,8 +35,14 @@ end
 require 'gom/client'
 
 module SpecHelpers
+  
+  class << self
+    attr_accessor :seq_no
+    @seq_no = 1
+  end
+  
   def next_uniq_seq_no
-    $__uniq_seq_no += 1
+    SpecHelpers.seq_no += 1
   end
   
   def uniq_node_uri(seq_no = next_uniq_seq_no)
@@ -50,7 +56,7 @@ end
 
 RSpec.configure do |config|
 
-  $__uniq_seq_no = 1
+  SpecHelpers.seq_no = 1
   config.include SpecHelpers
 
   VCR.configure do |c|
