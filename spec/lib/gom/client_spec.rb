@@ -7,7 +7,7 @@ describe Gom::Client do
   end
 
   it 'can validate gom_paths' do
-    %w{/
+    %w(/
        /test:path
        /test:path
        /test/foo/.bar
@@ -19,11 +19,11 @@ describe Gom::Client do
        /test/sub:attr
        /node
        /.hidden_top_level
-       /.hidden/.also_hidden}.each { |path|
+       /.hidden/.also_hidden).each { |path|
       expect(Gom::Client.send :valid_gom_path?, path).to be_true
     }
     
-    %w{foo
+    %w(foo
        :
        bar:foo
        //
@@ -31,7 +31,7 @@ describe Gom::Client do
        //
        ::
        /foo/
-       foo/}.each { |path|
+       foo/).each { |path|
       expect(Gom::Client.send :valid_gom_path?, path).to be_false
     }
     expect(Gom::Client.send :valid_gom_path?, nil).to be_false
