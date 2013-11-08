@@ -140,6 +140,15 @@ describe Gom::Client do
       )
     end
 
+    it 'does not accept nil as path when destroying paths' do
+      expect { gom.destroy!(nil) }.to raise_error(ArgumentError)
+      expect { gom.destroy!('') }.to raise_error(ArgumentError)
+      expect { gom.destroy!(' ') }.to raise_error(ArgumentError)
+      expect { gom.destroy(nil) }.to raise_error(ArgumentError)
+      expect { gom.destroy('') }.to raise_error(ArgumentError)
+      expect { gom.destroy(' ') }.to raise_error(ArgumentError)
+    end
+
     context 'destroying things' do
       let(:nuri) { uniq_node_uri }
       let(:auri) { "#{nuri}:foo" }

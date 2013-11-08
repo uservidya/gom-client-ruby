@@ -64,6 +64,7 @@ module Gom
     # GOM API Change: Destroy will NOT return error on non-existing attributes
     # or nodes. So no error will every be raised from this methods
     def destroy!(path_or_uri)
+      raise ArgumentError, "invalid path: '#{path_or_uri}'" unless self.class.valid_gom_path?(path_or_uri.to_s)
       uri      = path_or_uri.kind_of?(URI) ? path_or_uri  : URI.parse("#{@root}#{path_or_uri}")
       response = Net::HTTP.new(uri.host, uri.port).delete(uri.path)
 
