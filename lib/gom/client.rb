@@ -215,6 +215,20 @@ module Gom
 
     private
 
+    def self.valid_gom_path? gom_path
+      return false if gom_path.nil?
+      # see http://rubular.com/r/YYxcKhvQXY
+      # for details
+      matches = /^
+        \/                    # always starts with a slash
+        ([.a-zA-Z0-9_-]*      # any valid nodename
+        (\/ [.a-zA-Z0-9_-]+)* # any further validly named subnodes
+        (:[a-zA-Z0-9_-]+)?)?  # an attribute with valid name
+      $/x.match(gom_path)
+      return false if matches.nil?
+      matches.size > 0
+    end
+
     def is_attribute?(the_path)
       !the_path.index(':').nil?
     end

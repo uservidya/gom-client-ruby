@@ -6,6 +6,39 @@ describe Gom::Client do
     Gom::Client.should be_kind_of(Class)
   end
 
+  it 'can validate gom_paths' do
+    %w{/
+       /test:path
+       /test:path
+       /test/foo/.bar
+       /test/foo/.bar/foo
+       /test/foo/.bar/foo:bar
+       /test/fo
+       /test/foo
+       /test/foo/bar/deep/and/even/deeper
+       /test/sub:attr
+       /node
+       /.hidden_top_level
+       /.hidden/.also_hidden}.each { |path|
+      expect(Gom::Client.send :valid_gom_path?, path).to be_true
+    }
+    
+    %w{foo
+       :
+       bar:foo
+       //
+       /foo:bar:gaz
+       //
+       ::
+       /foo/
+       foo/}.each { |path|
+      expect(Gom::Client.send :valid_gom_path?, path).to be_false
+    }
+    expect(Gom::Client.send :valid_gom_path?, nil).to be_false
+    expect(Gom::Client.send :valid_gom_path?, '').to be_false
+    expect(Gom::Client.send :valid_gom_path?, ' ').to be_false
+  end
+
   context 'VCR cassette' do
     # let(:gom)     { Gom::Client.new('http://gom.dev.artcom.de') }
     let(:gom)     { Gom::Client.new('http://127.0.0.1:3000') }
