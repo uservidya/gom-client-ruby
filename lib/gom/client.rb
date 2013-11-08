@@ -32,7 +32,7 @@ module Gom
     end
 
     def retrieve(path_or_uri, redirect_limit = 10)
-      self.retrieve! path_or_uri, redirect_limit
+      retrieve! path_or_uri, redirect_limit
       rescue Gom::HttpError => e
         return nil if e.response.code == '404'
         raise e
@@ -55,7 +55,7 @@ module Gom
       end
 
       if response.kind_of?(Net::HTTPRedirection)
-        return Gom::retrieve(response['location'], redirect_limit - 1)
+        return retrieve(response['location'], redirect_limit - 1)
       end
 
       raise HttpError.new(response, "while GETting #{uri.path}")
@@ -73,7 +73,7 @@ module Gom
     end
 
     def destroy(uri)
-      self.destroy! uri
+      destroy! uri
       rescue Gom::HttpError => e
         return nil if e.response.code == '404'
         raise e
