@@ -1,14 +1,14 @@
+# -*- encoding: utf-8 -*-
 require 'rake'
 
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'gom/client/version'
 
 Gem::Specification.new do |s|
   s.name        = 'gom-client'
   s.version     = Gom::Client::VERSION
   s.date        = Gom::Client::DATE
-  s.authors     = "ART+COM"
+  s.authors     = 'ART+COM'
   s.homepage    = 'http://www.artcom.de/'
   s.summary     = 'REST client for the gom HTTP API'
 
@@ -37,5 +37,5 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map do |f| 
     File.basename(f)
   end
-  s.require_paths = ["lib"]
+  s.require_paths = ['lib']
 end

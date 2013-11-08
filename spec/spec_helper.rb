@@ -1,5 +1,5 @@
-$:.unshift(File.dirname(__FILE__))
-$:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+$LOAD_PATH.unshift(File.dirname(__FILE__))
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
 require 'chromatic'
 
@@ -34,24 +34,19 @@ end
 
 require 'gom/client'
 
-
 module SpecHelpers
-
   def next_uniq_seq_no
     $__uniq_seq_no += 1
   end
+  
   def uniq_node_uri(seq_no = next_uniq_seq_no)
-    #t = Time.now
-    #uri = "/some/random/node/n#{t.tv_sec}_#{t.tv_usec}"
-    uri = "/test/node/n#{seq_no}"
+    "/test/node/n#{seq_no}"
   end
+  
   def uniq_attr_uri(seq_no = next_uniq_seq_no)
-    #t = Time.now
-    #uri = "/some/random/node/n#{t.tv_usec}:a#{t.tv_usec}"
-    uri = "/test/node/n#{seq_no}:a#{seq_no}"
+    "/test/node/n#{seq_no}:a#{seq_no}"
   end
 end
-
 
 RSpec.configure do |config|
 

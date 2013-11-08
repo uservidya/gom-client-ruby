@@ -7,13 +7,13 @@ describe Gom::Client do
   end
 
   context 'VCR cassette' do
-    #let(:gom)     { Gom::Client.new('http://gom.dev.artcom.de') }
+    # let(:gom)     { Gom::Client.new('http://gom.dev.artcom.de') }
     let(:gom)     { Gom::Client.new('http://127.0.0.1:3000') }
-    #let(:prefix)  { gom.create!("/tests", {}) }
-    #let(:prefix)  { "/tests/08ec4b58-38b3-44ac-9ea9-62b42a62b061" }
+    # let(:prefix)  { gom.create!("/tests", {}) }
+    # let(:prefix)  { "/tests/08ec4b58-38b3-44ac-9ea9-62b42a62b061" }
 
     before(:all) {
-      VCR.insert_cassette('127.0.0.1:3000', :record => :new_episodes)
+      VCR.insert_cassette('127.0.0.1:3000', record: :new_episodes)
       # VCR.insert_cassette('gom.dev.artcom.de', :record => :new_episodes)
     }
     after(:all) {
@@ -21,7 +21,7 @@ describe Gom::Client do
     }
 
     it 'creates and retrieves new node with no attributes' do
-      (uri = gom.create!("/tests/1", {})).should match(%r(/tests/1/\w+))
+      (uri = gom.create!('/tests/1', {})).should match(%r(/tests/1/\w+))
       (hash = gom.retrieve uri).should be_kind_of(Hash)
       (node = hash[:node]).should be_kind_of(Hash)
       node[:uri].should eq(uri)
@@ -29,8 +29,8 @@ describe Gom::Client do
     end
 
     it 'creates and retrieves new node with some attributes' do
-      values = {:x => :u, :a => 23}
-      (uri = gom.create!("/tests/2", values)).should match(%r(/tests/2/\w+))
+      values = {x: :u, a: 23}
+      (uri = gom.create!('/tests/2', values)).should match(%r(/tests/2/\w+))
       (hash = gom.retrieve uri).should be_kind_of(Hash)
       (node = hash[:node]).should be_kind_of(Hash)
       node[:uri].should eq(uri)
@@ -50,7 +50,7 @@ describe Gom::Client do
       before(:each) { gom.update nuri }
 
       it 'updates node with attributes' do
-        values = { "foo1" => "val1", "foo2" => "val2" }
+        values = { 'foo1' => 'val1', 'foo2' => 'val2' }
         (h = gom.update nuri, values).should be_kind_of(Hash)
         h[:status].should eq(200)
       end
@@ -85,9 +85,9 @@ describe Gom::Client do
 
     it 'updates existing attribute to empty value' do
       uri = uniq_attr_uri
-      gom.update(uri, "something")
+      gom.update(uri, 'something')
 
-      gom.update uri, ""
+      gom.update uri, ''
       (hash = gom.retrieve uri).should be_kind_of(Hash)
       hash[:attribute].should be
       hash[:attribute][:value].should eq('')
@@ -102,7 +102,7 @@ describe Gom::Client do
     end
 
     it 'raises a 404 on retrieval of non-existing nodes' do
-      expect { gom.retrieve! "/no/such/node" }.to raise_error(
+      expect { gom.retrieve! '/no/such/node' }.to raise_error(
         Gom::HttpError, %r(404 Not Found\s+while GETting /no/such/node)
       )
     end
@@ -110,11 +110,11 @@ describe Gom::Client do
     context 'destroying things' do
       let(:nuri) { uniq_node_uri }
       let(:auri) { "#{nuri}:foo" }
-      let(:val) { "wello horld!" }
+      let(:val) { 'wello horld!' }
       before(:each) { (gom.update auri, val).should eq(val) }
 
       it 'destroys attributes' do
-        expect{gom.destroy auri}.to_not raise_error
+        expect { gom.destroy auri }.to_not raise_error
         gom.retrieve(auri).should be(nil)
         expect { gom.retrieve!(auri) }.to raise_error(
           Gom::HttpError, %r(404 Not Found\s+while GETting #{auri})
@@ -122,7 +122,7 @@ describe Gom::Client do
       end
 
       it 'destroys nodes' do
-        expect{gom.destroy nuri}.to_not raise_error
+        expect { gom.destroy nuri }.to_not raise_error
         gom.retrieve(nuri).should be(nil)
 
         expect { gom.retrieve!(nuri) }.to raise_error(
@@ -145,7 +145,7 @@ describe Gom::Client do
     context 'running server side scripts' do
       it 'raises on script AND path over-specified request' do
         expect {
-          gom.run_script(:script => "something", :path  => "something else")
+          gom.run_script(script: 'something', path: 'something else')
         }.to raise_error(
           ArgumentError, %r(must not provide script AND path)
         )
@@ -159,13 +159,13 @@ describe Gom::Client do
 
       context 'posted script' do
         it 'runs simple posted script' do
-          rc = gom.run_script(:script => '"hello"')
+          rc = gom.run_script(script: '"hello"')
           rc.body.should eq('hello')
           rc.code.should eq('200')
         end
 
         it 'passes parameter from request to the script' do
-          rc = gom.run_script(script: 'params.test', :params => {test: 'p1'})
+          rc = gom.run_script(script: 'params.test', :params => { test: 'p1' })
           rc.body.should eq('p1')
           rc.code.should eq('200')
         end
@@ -198,13 +198,13 @@ describe Gom::Client do
 
         it 'passes parameter from request to the script' do
           gom.update(script_uri, 'params.p1')
-          rc = gom.run_script(path: script_uri, :params => {p1: 'p1'})
+          rc = gom.run_script(path: script_uri, params: {p1: 'p1'})
           rc.body.should eq('p1')
           rc.code.should eq('200')
         end
 
         it 'passes multiple parameter to script' do
-          gom.update(script_uri, "params.p1 + ':' + params.p2")
+          gom.update(script_uri, %Q|params.p1 + ':' + params.p2|)
           rc = gom.run_script(path: script_uri, params: {p1: 'p1', p2: 'p2'})
           rc.body.should eq('p1:p2')
           rc.code.should eq('200')
@@ -242,7 +242,7 @@ describe Gom::Client do
           obs.should match %r(/gom/observer#{target_uri}/\..+)
           gom.retrieve_val("#{obs}:observed_uri").should eq(target_uri)
           gom.retrieve_val("#{obs}:callback_url").should eq(cb_url)
-          gom.retrieve_val("#{obs}:accept").should eq("application/json")
+          gom.retrieve_val("#{obs}:accept").should eq('application/json')
           gom.retrieve("#{obs}:operations").should be_nil
           gom.retrieve("#{obs}:uri_regexp").should be_nil
           gom.retrieve("#{obs}:condition_script").should be_nil
@@ -261,7 +261,7 @@ describe Gom::Client do
           obs.should match %r(/gom/observer#{target_uri}/\..+)
           gom.retrieve_val("#{obs}:observed_uri").should eq(target_uri)
           gom.retrieve_val("#{obs}:callback_url").should eq(cb_url)
-          gom.retrieve_val("#{obs}:accept").should eq("application/json")
+          gom.retrieve_val("#{obs}:accept").should eq('application/json')
           gom.retrieve_val("#{obs}:operations").should eq('update,create')
           gom.retrieve_val("#{obs}:uri_regexp").should eq('*')
           gom.retrieve_val("#{obs}:condition_script").should eq('1 === 1;')
@@ -272,7 +272,7 @@ describe Gom::Client do
 
       context 'named observer' do
         let(:target_uri) { uniq_node_uri }
-        let(:name) { "o1234" } ##{Time.now.tv_usec}" }
+        let(:name) { 'o1234' } # #{Time.now.tv_usec}" }
 
         it 'supports filters' do
           # with node, callback_url and filters
@@ -287,7 +287,7 @@ describe Gom::Client do
           obs.should eq("/gom/observer#{target_uri}/.#{name}")
           gom.retrieve_val("#{obs}:observed_uri").should eq(target_uri)
           gom.retrieve_val("#{obs}:callback_url").should eq(cb_url)
-          gom.retrieve_val("#{obs}:accept").should eq("application/json")
+          gom.retrieve_val("#{obs}:accept").should eq('application/json')
           gom.retrieve_val("#{obs}:operations").should eq('update,create')
           gom.retrieve_val("#{obs}:uri_regexp").should eq('*')
           gom.retrieve_val("#{obs}:condition_script").should eq('1 === 1;')
@@ -303,7 +303,7 @@ describe Gom::Client do
           obs.should eq("/gom/observer#{target_uri}/.#{name}")
           gom.retrieve_val("#{obs}:observed_uri").should eq(target_uri)
           gom.retrieve_val("#{obs}:callback_url").should eq(cb_url)
-          gom.retrieve_val("#{obs}:accept").should eq("application/json")
+          gom.retrieve_val("#{obs}:accept").should eq('application/json')
           gom.retrieve_val("#{obs}:operations").should be(nil)
           gom.retrieve_val("#{obs}:uri_regexp").should be(nil)
           gom.retrieve_val("#{obs}:condition_script").should be(nil)

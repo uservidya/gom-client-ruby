@@ -1,9 +1,8 @@
 require 'uri'
 require 'net/http'
-#require 'active_support'
 require 'rexml/document'
 require 'gom/client/version'
-require 'json' #/pure'
+require 'json' # /pure'
 
 module Gom
 
@@ -32,16 +31,16 @@ module Gom
       (a = retrieve(path_or_uri)) && a[:attribute][:value]
     end
 
-    def retrieve(path_or_uri, redirect_limit=10)
+    def retrieve(path_or_uri, redirect_limit = 10)
       self.retrieve! path_or_uri, redirect_limit
       rescue Gom::HttpError => e
-        return nil if e.response.code == "404"
+        return nil if e.response.code == '404'
         raise e
     end
 
-    def retrieve!(path_or_uri, redirect_limit=10)
+    def retrieve!(path_or_uri, redirect_limit = 10)
       uri      = path_or_uri.kind_of?(URI) ? path_or_uri : URI.parse("#{@root}#{path_or_uri}")
-      response = Net::HTTP.new(uri.host, uri.port).request_get(uri.path, {"Accept" => "application/json" })
+      response = Net::HTTP.new(uri.host, uri.port).request_get(uri.path, {'Accept' => 'application/json' })
 
       begin
         if response.kind_of?(Net::HTTPSuccess)
@@ -51,8 +50,8 @@ module Gom
         raise HttpError.new(response, "#{e} -- could not parse body: '#{response.body}'")
       end
 
-      if (redirect_limit == 0 && response.kind_of?(Net::HTTPRedirection))
-        raise "too many redirects"
+      if redirect_limit == 0 && response.kind_of?(Net::HTTPRedirection)
+        raise 'too many redirects'
       end
 
       if response.kind_of?(Net::HTTPRedirection)
@@ -75,11 +74,11 @@ module Gom
     def destroy(uri)
       self.destroy! uri
       rescue Gom::HttpError => e
-        return nil if e.response.code == "404"
+        return nil if e.response.code == '404'
         raise e
     end
 
-    def create!(path_or_uri, attributes={})
+    def create!(path_or_uri, attributes = {})
       uri          = path_or_uri.kind_of?(URI) ? path_or_uri : URI.parse("#{@root}#{path_or_uri}")
       request_body = attributes_to_xml attributes
       headers      = { 'Content-Type' => 'application/xml' }
@@ -92,46 +91,52 @@ module Gom
       raise HttpError.new(response, "while CREATEing (#{uri.path})")
     end
 
-    def update!(path_or_uri, hash_or_text=nil)
+    def update!(path_or_uri, hash_or_text = nil)
       uri = path_or_uri.kind_of?(URI) ? path_or_uri : URI.parse("#{@root}#{path_or_uri}")
 
       if is_attribute?(uri.path)
-          raise "update attribute call must include value" if hash_or_text.nil?
-          raise "update attribute value must be a string" unless hash_or_text.kind_of?(String)
-          response_format              = "text/plain"
-          if hash_or_text != ""
+          raise 'update attribute call must include value' if hash_or_text.nil?
+          raise 'update attribute value must be a string' unless hash_or_text.kind_of?(String)
+          response_format              = 'text/plain'
+          if hash_or_text != ''
             doc                          = REXML::Document.new
             attr_node                    = doc.add_element 'attribute'
-            attr_node.attributes['type'] = 'string';
+            attr_node.attributes['type'] = 'string'
             attr_node.text               = hash_or_text
             request_body                 = doc.to_s
-            headers  = { 'Content-Type' => 'application/xml',
-                         'Accept'       => response_format }
+            headers  = {
+              'Content-Type' => 'application/xml',
+              'Accept'       => response_format
+            }
           else
             request_body                 = "attribute=#{hash_or_text}&type=string"
-            headers  = { 'Content-Type' => 'application/x-www-form-urlencoded',
-                         'Accept'       => response_format }
+            headers  = {
+              'Content-Type' => 'application/x-www-form-urlencoded',
+              'Accept'       => response_format
+            }
           end
       else
-          raise "update node values must be a hash of attributes" unless hash_or_text.nil? or hash_or_text.kind_of?(Hash)
+          raise 'update node values must be a hash of attributes' unless hash_or_text.nil? || hash_or_text.kind_of?(Hash)
           request_body = attributes_to_xml hash_or_text || {}
-          response_format = "application/json"
-          headers  = { 'Content-Type' => 'application/xml',
-                       'Accept'       => response_format }
+          response_format = 'application/json'
+          headers  = {
+            'Content-Type' => 'application/xml',
+            'Accept'       => response_format
+          }
       end
 
-      #headers  = { 'Content-Type' => 'application/xml',
-      #             'Accept'       => response_format }
+      # headers  = { 'Content-Type' => 'application/xml',
+      #              'Accept'       => response_format }
 
       response = Net::HTTP.new(uri.host, uri.port).request_put(uri.path, request_body, headers)
 
-      return response.body if response.kind_of?(Net::HTTPSuccess) && response_format == "text/plain"
-      if response.kind_of?(Net::HTTPSuccess) && response_format == "application/json"
+      return response.body if response.kind_of?(Net::HTTPSuccess) && response_format == 'text/plain'
+      if response.kind_of?(Net::HTTPSuccess) && response_format == 'application/json'
         return JSON.parse(response.body, symbolize_names: true)
       end
       raise HttpError.new(response, "while PUTting #{uri.path}")
     end
-    alias update update!
+    alias_method :update, :update!
 
     # supports stored and posted scripts
     def run_script(options = {})
@@ -140,19 +145,19 @@ module Gom
       params = options[:params] || {}
 
       if path.nil?
-        script.nil? and (raise ArgumentError, "must provide script OR path")
+        script.nil? && (raise ArgumentError, 'must provide script OR path')
       else
-        script and (raise ArgumentError, "must not provide script AND path")
+        script && (raise ArgumentError, 'must not provide script AND path')
         params[:_script_path] = path
       end
 
-      params = params.keys.zip(params.values).map {|k,v| "#{k}=#{v}"}
+      params = params.keys.zip(params.values).map { |k, v| "#{k}=#{v}" }
       url = URI.parse("#{@root}/gom/script/v8?#{params.join('&')}")
 
       response = Net::HTTP.start(url.host, url.port) do |http|
         if script
           request = Net::HTTP::Post.new(url.to_s)
-          request.set_content_type "text/javascript"
+          request.set_content_type 'text/javascript'
           http.request(request, script)
         else
           request  = Net::HTTP::Get.new(url.to_s)
@@ -170,26 +175,28 @@ module Gom
     end
 
     # supports anonymous and named observers
-    def register_observer(options={})
+    def register_observer(options = {})
       name         = options[:name]         || nil
       callback_url = options[:callback_url] || nil
       node         = options[:node]         || nil
       filters      = options[:filters]      || {}
-      format       = options[:format]       || "application/json"
+      format       = options[:format]       || 'application/json'
 
-      callback_url.nil? and (raise ArgumentError, "callback_url must not be nil")
-      node.nil? and (raise ArgumentError, "node must not be nil")
+      callback_url.nil? && (raise ArgumentError, 'callback_url must not be nil')
+      node.nil? && (raise ArgumentError, 'node must not be nil')
       unless ['application/json', 'application/xml'].include?(format)
         raise ArgumentError, "invalid format: '#{format}'"
       end
 
       url       = URI.parse("#{@root}/gom/observer#{node}")
-      form_data = { 'callback_url' => callback_url,
-                    'accept'       => format }
+      form_data = {
+        'callback_url' => callback_url,
+        'accept'       => format
+      }
       form_data.merge!(filters)
 
       if name
-        observer_url = url.path.gsub(/\:/,'/')
+        observer_url = url.path.gsub(/\:/, '/')
         my_uri       = "#{observer_url}/.#{name}"
         destroy my_uri
 
@@ -209,10 +216,10 @@ module Gom
     private
 
     def is_attribute?(the_path)
-      not the_path.index(":").nil?
+      !the_path.index(':').nil?
     end
 
-    def attributes_to_xml(hash={})
+    def attributes_to_xml(hash = {})
       doc  = REXML::Document.new
       node = doc.add_element 'node'
       hash.each do |key, value|
