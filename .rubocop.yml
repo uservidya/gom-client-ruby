@@ -2,13 +2,13 @@ Encoding:
   Enabled: false
 
 TrailingWhitespace:
-  Enabled: false
+  Enabled: true
   
 DefWithParentheses:
-  Enabled: false
+  Enabled: true
 
 DefWithoutParentheses:
-  Enabled: false
+  Enabled: true
 
 LineLength:
   Enabled: false
@@ -19,7 +19,7 @@ Documentation:
 # There is a subtle difference between blocks with {...} and do...end.
 # Rubocop does not seem to notice that.
 Blocks:
-  Enabled: false
+  Enabled: true
 
 LeadingCommentSpace:
   Enabled: true
@@ -28,13 +28,13 @@ MethodLength:
   Enabled: false
 
 CaseEquality:
-  Enabled: false
+  Enabled: true
 
 StringLiterals:
   Enabled: true
 
 SpaceInsideHashLiteralBraces:
-  Enabled: false
+  Enabled: true
 
 Loop:
   Enabled: false
@@ -49,7 +49,7 @@ CommentAnnotation:
   Enabled: false
 
 AssignmentInCondition:
-  Enabled: false
+  Enabled: true
 
 SignalException:
   Enabled: false

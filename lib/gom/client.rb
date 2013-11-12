@@ -40,7 +40,10 @@ module Gom
 
     def retrieve!(path_or_uri, redirect_limit = 10)
       uri      = path_or_uri.kind_of?(URI) ? path_or_uri : URI.parse("#{@root}#{path_or_uri}")
-      response = Net::HTTP.new(uri.host, uri.port).request_get(uri.path, {'Accept' => 'application/json' })
+      response = Net::HTTP.new(uri.host, uri.port)
+                          .request_get(uri.path, {
+                                         'Accept' => 'application/json'
+                                       })
 
       begin
         if response.kind_of?(Net::HTTPSuccess)
@@ -216,7 +219,7 @@ module Gom
 
     private
 
-    def self.valid_gom_path? gom_path
+    def self.valid_gom_path?(gom_path)
       return false if gom_path.nil?
       # see http://rubular.com/r/YYxcKhvQXY
       # for details

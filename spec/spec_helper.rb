@@ -19,7 +19,7 @@ if ENV['COVERAGE']
     html: SimpleCov::Formatter::HTMLFormatter,
     rcov: SimpleCov::Formatter::RcovFormatter
   }
-  
+
   SimpleCov.formatter = SIMPLECOV_FORMATTERS.fetch(
                           ENV['COVERAGE'].to_sym,
                           SIMPLECOV_FORMATTERS[:html])
@@ -35,20 +35,20 @@ end
 require 'gom/client'
 
 module SpecHelpers
-  
+
   class << self
     attr_accessor :seq_no
     @seq_no = 1
   end
-  
+
   def next_uniq_seq_no
     SpecHelpers.seq_no += 1
   end
-  
+
   def uniq_node_uri(seq_no = next_uniq_seq_no)
     "/test/node/n#{seq_no}"
   end
-  
+
   def uniq_attr_uri(seq_no = next_uniq_seq_no)
     "/test/node/n#{seq_no}:a#{seq_no}"
   end

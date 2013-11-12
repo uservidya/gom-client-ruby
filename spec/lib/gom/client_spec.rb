@@ -19,10 +19,10 @@ describe Gom::Client do
        /test/sub:attr
        /node
        /.hidden_top_level
-       /.hidden/.also_hidden).each { |path|
+       /.hidden/.also_hidden).each do |path|
       expect(Gom::Client.send :valid_gom_path?, path).to be_true
-    }
-    
+    end
+
     %w(foo
        :
        bar:foo
@@ -31,9 +31,9 @@ describe Gom::Client do
        //
        ::
        /foo/
-       foo/).each { |path|
+       foo/).each do |path|
       expect(Gom::Client.send :valid_gom_path?, path).to be_false
-    }
+    end
     expect(Gom::Client.send :valid_gom_path?, nil).to be_false
     expect(Gom::Client.send :valid_gom_path?, '').to be_false
     expect(Gom::Client.send :valid_gom_path?, ' ').to be_false
@@ -45,13 +45,13 @@ describe Gom::Client do
     # let(:prefix)  { gom.create!("/tests", {}) }
     # let(:prefix)  { "/tests/08ec4b58-38b3-44ac-9ea9-62b42a62b061" }
 
-    before(:all) {
+    before(:all) do
       VCR.insert_cassette('127.0.0.1:3000', record: :new_episodes)
       # VCR.insert_cassette('gom.dev.artcom.de', :record => :new_episodes)
-    }
-    after(:all) {
+    end
+    after(:all) do
       VCR.eject_cassette
-    }
+    end
 
     it 'creates and retrieves new node with no attributes' do
       (uri = gom.create!('/tests/1', {})).should match(%r(/tests/1/\w+))
@@ -62,7 +62,7 @@ describe Gom::Client do
     end
 
     it 'creates and retrieves new node with some attributes' do
-      values = {x: :u, a: 23}
+      values = { x: :u, a: 23 }
       (uri = gom.create!('/tests/2', values)).should match(%r(/tests/2/\w+))
       (hash = gom.retrieve uri).should be_kind_of(Hash)
       (node = hash[:node]).should be_kind_of(Hash)
@@ -186,9 +186,9 @@ describe Gom::Client do
 
     context 'running server side scripts' do
       it 'raises on script AND path over-specified request' do
-        expect {
+        expect do
           gom.run_script(script: 'something', path: 'something else')
-        }.to raise_error(
+        end.to raise_error(
           ArgumentError, %r(must not provide script AND path)
         )
       end
@@ -213,7 +213,7 @@ describe Gom::Client do
         end
 
         it 'passes multiple parameter to script' do
-          rc = gom.run_script(script: <<-JS, params: {p1: 'p1', p2: 'p2'})
+          rc = gom.run_script(script: <<-JS, params: { p1: 'p1', p2: 'p2' })
             params.p1 + ':' + params.p2
           JS
           rc.body.should eq('p1:p2')
@@ -240,14 +240,14 @@ describe Gom::Client do
 
         it 'passes parameter from request to the script' do
           gom.update(script_uri, 'params.p1')
-          rc = gom.run_script(path: script_uri, params: {p1: 'p1'})
+          rc = gom.run_script(path: script_uri, params: { p1: 'p1' })
           rc.body.should eq('p1')
           rc.code.should eq('200')
         end
 
         it 'passes multiple parameter to script' do
           gom.update(script_uri, %Q|params.p1 + ':' + params.p2|)
-          rc = gom.run_script(path: script_uri, params: {p1: 'p1', p2: 'p2'})
+          rc = gom.run_script(path: script_uri, params: { p1: 'p1', p2: 'p2' })
           rc.body.should eq('p1:p2')
           rc.code.should eq('200')
         end
