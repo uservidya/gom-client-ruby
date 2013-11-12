@@ -7,4 +7,3 @@ rvm:
   - 2.0.0
 gemfile:
   - Gemfile
-build_environment : Ubuntu1304
